@@ -10,7 +10,11 @@
   </head>
 
   <body>
-    <%= render "/layouts/navbar2" %>
+    <% if user_signed_in? %>
+        <%= render :partial => 'layouts/navbar' %>
+      <% else %>
+        <%= render :partial => 'layouts/navbar2' %>
+      <%end%>
   	<div class="container-fluid">
   		<br>
     	<%= yield %>
