@@ -1,5 +1,5 @@
 class AddUserColumnToUser < ActiveRecord::Migration[5.1]
   def change
-  	add_column :users, :user_id, :integer
+  	add_column :workorders, :user_id, :integer
   end
 end
