@@ -1,4 +1,5 @@
 class WorkorderController < ApplicationController
+  before_action :authenticate_user!
   def index
   	@workorders = Workorder.all
   end
