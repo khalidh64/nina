@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  erpno: MyString
+  clientname: MyString
+  sitename: MyString
+  workorderno: MyString
+  workorderdate: MyString
+  workorder_type: MyString
+  workorder_value: MyString
+  mobbg_no: MyString
+  mobadv: MyString
+  matadv: MyString
+  retbg: MyString
+  perbg: MyString
+  pwarrenty: MyString
+  workcompdate: MyString
+  remarks: MyText
+
+two:
+  erpno: MyString
+  clientname: MyString
+  sitename: MyString
+  workorderno: MyString
+  workorderdate: MyString
+  workorder_type: MyString
+  workorder_value: MyString
+  mobbg_no: MyString
+  mobadv: MyString
+  matadv: MyString
+  retbg: MyString
+  perbg: MyString
+  pwarrenty: MyString
+  workcompdate: MyString
+  remarks: MyText

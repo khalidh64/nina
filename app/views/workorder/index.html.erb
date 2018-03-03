@@ -1,0 +1,60 @@
+<% if notice %>
+	<div class="alert alert-success alert-dismissible" role="alert">
+  	 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= notice %>
+  </div>
+<% end %>
+<% if alert %>
+  <div class="alert alert-danger alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= alert %>
+  </div>
+<% end %>
+<div class="row">
+	<div class="col-sm-4">
+		<a href="/addworkorder"><button class="btn btn-primary">Add WorkOrder</button></a>
+	</div>
+	<div class="col-sm-8">
+		<form class="form-inline" action="/action_page.php">
+    <input class="form-control" type="text" placeholder="Search">
+    <button class="btn btn-success" type="submit">Search</button>
+  </form>
+</div>
+<!-- <table class="table table-bordered">
+		<tr>
+		<th>Erp No</th>
+		<th>Client Name</th>
+		<th>Site Name</th>
+		<th>Work Order Number</th>
+		<th>Work Order Date</th>
+		<th>Work Order Type</th>
+		<th>Work Order Value</th>
+		<th></th>
+		<th></th>
+		<th></th>
+		<th></th>
+		<th></th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
+	<% @workorders.each do |w| %>
+	<tr>
+		<td><%=w.erpno %></td>
+		<td><%=w.clientname %></td>
+		<td><%=w.sitename %></td>
+		<td><%=w.workorderno %></td>
+		<td><%=w.workorderdate %></td>
+		<td><%=w.workorder_type %></td>
+		<td><%=w.workorder_value %></td>
+		<td><%=w.mobbg_no %></td>
+		<td><%=w.mobadv %></td>
+		<td><%=w.matadv %></td>
+		<td><%=w.retbg %></td>
+		<td><%=w.perbg %></td>
+		<td><%=w.pwarrenty %></td>
+		<td><%=w.workcompdate %></td>
+		<td><%=w.remarks %></td>		
+	</tr>
+	<% end %> -->
+</table>

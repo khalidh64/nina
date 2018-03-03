@@ -1,0 +1,72 @@
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <a href="/workorders"><button class="btn btn-primary">Back</button></a><br/><br/>
+<%= simple_form_for @workorder, url: {:action => "create", :method => "post"}, :html => {:class => "form-horizontal"} do |f| %>
+	<div class="row">
+		<div class="col-sm-4">
+			<%=f.input :erpno, :label => false,required: true, :placeholder => "ERP NO" %>
+		</div>
+		<div class="col-sm-4">
+			<%=f.input :clientname, :label => false, :placeholder => "Client Name" %>
+		</div>
+		<div class="col-sm-4">
+			<%=f.input :sitename, :label => false, :placeholder => "Site Name" %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4">
+			<%=f.input :workorderno, :label => false, :placeholder => "WorkOrder Number" %>
+		</div>
+		<div class="col-sm-4">
+			<%=f.input :workorderdate, :label => false, :placeholder => "WorkOrder Date", :input_html => {:id => "datepicker"} %>
+		</div>
+		<div class="col-sm-4">
+			<%=f.input :workorder_type, as: :select, required: true, collection: ["New", "Ammendment"], :label => false,  	 :prompt => "Select Work order type" %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4">
+			<%=f.input :workorder_value, :label => false, :placeholder => "Work Order Value" %>
+		</div>
+		<div class="col-sm-4">
+			<%=f.input :mobbg_no, :label => false, :placeholder => "Mobilisation Bank Gaurantee" %>
+		</div>
+		<div class="col-sm-4">
+			<%=f.input :mobadv, :label => false, :placeholder => "Mobilisation Advance Amount Received" %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4">
+			<%=f.input :matadv, :label => false, :placeholder => "Material Advance Amount Received" %>
+		</div>
+		<div class="col-sm-4">
+			<%=f.input :retbg, :label => false, :placeholder => "Retention Bank Gaurantee" %>
+		</div>
+		<div class="col-sm-4">
+			<%=f.input :perbg, :label => false, :placeholder => "Performance Bank Gaurantee" %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6">
+			<%=f.input :pwarrenty, :label => false, :placeholder => "Performance Warranty" %>
+		</div>
+		<div class="col-sm-6">
+			<%=f.input :workcompdate, :label => false, :placeholder => "WorkOrder Completion Date", :input_html => {:id => "datepicker2"} %>
+		</div>
+	</div>
+
+		<div>
+			<%=f.input :remarks, :label => false, :placeholder => "Remarks" %>
+		</div>
+
+		<%= f.submit "Submit", :class => "btn btn-primary" %>
+
+<% end %>
+<script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+    $( "#datepicker2" ).datepicker();
+  } );
+  </script>

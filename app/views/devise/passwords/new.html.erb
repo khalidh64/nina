@@ -1,0 +1,34 @@
+<div class="row text-center">
+  <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+    <%= image_tag "logo.png", :width => "50%" %>
+      
+    <table class="table table-bordered text-center" style="width:100%">
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <tr>
+        <th colspan="2">
+        	<h2>Forgot your password?</h2>
+        	 <%= devise_error_messages! %>
+		</th>
+      </tr>
+      <tr>
+      	<td>
+      		<div class="field">
+		    	<%= f.label :email %><br />
+		    	<%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+		  </div>
+		  <div class="actions">
+		    <%= f.submit "reset password", :class => "btn btn-primary" %>
+		  </div>
+		  <%= render "devise/shared/links" %>
+		</td>
+      </tr>   
+         
+      <% end %>
+    </table>
+  </div>
+  <div class="col-sm-3"></div>
+</div>
+  
+
+
