@@ -1,7 +1,11 @@
 class WorkorderController < ApplicationController
   before_action :authenticate_user!
   def index
-  	@workorders = Workorder.all
+    if params[:erpno]
+  	 @workorder = Workorder.find_by_erpno(params[:erpno])
+    else
+      @workorders = Workorder.all
+    end
   end
 
   def new
@@ -13,7 +17,7 @@ class WorkorderController < ApplicationController
     @workorder.user_id = current_user.id
   	if @workorder.valid?
   		@workorder.save
-  		redirect_to workorder_path, :notice=> "Workorder created."
+  		redirect_to workorders_path, :notice=> "Workorder created."
   	else
   		redirect_to :back, :alert => @order.errors
   	end

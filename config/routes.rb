@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   
   root 'home#index'
   
-  get 'workorders' => 'workorder#index'
+  get '/workorders' => 'workorder#index'
+  post '/workorders/:search' => 'workorder#index'
+
   get '/addworkorder' => 'workorder#new'
   post 'create' => 'workorder#create'
 

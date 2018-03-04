@@ -15,47 +15,77 @@
 		<a href="/addworkorder"><button class="btn btn-primary">Add WorkOrder</button></a>
 	</div>
 	<div class="col-sm-8">
-		<form class="form-inline" action="/action_page.php">
-    <input class="form-control" type="text" placeholder="Search">
-    <button class="btn btn-success" type="submit">Search</button>
-  </form>
+		<form class="form-inline" action="/workorders">
+    		<input class="form-control" name="erpno" type="text" placeholder="Search">
+    		<button class="btn btn-success" type="submit">Search</button>
+  		</form>
+  	</div>
 </div>
-
-<!-- <table class="table table-bordered">
-		<tr>
-		<th>Erp No</th>
-		<th>Client Name</th>
-		<th>Site Name</th>
-		<th>Work Order Number</th>
-		<th>Work Order Date</th>
-		<th>Work Order Type</th>
-		<th>Work Order Value</th>
-		<th></th>
-		<th></th>
-		<th></th>
-		<th></th>
-		<th></th>
-		<th></th>
-		<th></th>
-		<th></th>
-	</tr>
-	<% @workorders.each do |w| %>
+<% if @workorder %>
+<table class="table table-bordered" width="100%">
 	<tr>
-		<td><%=w.erpno %></td>
-		<td><%=w.clientname %></td>
-		<td><%=w.sitename %></td>
-		<td><%=w.workorderno %></td>
-		<td><%=w.workorderdate %></td>
-		<td><%=w.workorder_type %></td>
-		<td><%=w.workorder_value %></td>
-		<td><%=w.mobbg_no %></td>
-		<td><%=w.mobadv %></td>
-		<td><%=w.matadv %></td>
-		<td><%=w.retbg %></td>
-		<td><%=w.perbg %></td>
-		<td><%=w.pwarrenty %></td>
-		<td><%=w.workcompdate %></td>
-		<td><%=w.remarks %></td>		
+		<td class="30%">ERP NUMBER</td>
+		<td><%=@workorder.erpno %></td>
 	</tr>
-	<% end %> -->
+	<tr>
+		<td>Client name</td>
+		<td><%=@workorder.clientname %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%=@workorder.sitename %></td>
+	</tr>
+    <tr>
+		<td></td>		
+		<td><%=@workorder.workorderno %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%=@workorder.workorderdate %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%=@workorder.workorder_type %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%=@workorder.workorder_value %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%=@workorder.mobbg_no %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%=@workorder.mobadv %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%=@workorder.matadv %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%=@workorder.retbg %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%=@workorder.perbg %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%=@workorder.pwarrenty %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%=@workorder.workcompdate %></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><%=@workorder.remarks %></td>		
+	</tr>
 </table>
+<% else %>
+<div class="text-center"><br><br><br>
+	<h3>No matches found</h3>
+</div>
+<% end %>
