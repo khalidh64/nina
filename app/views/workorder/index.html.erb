@@ -24,9 +24,18 @@
   	</div>
 </div>
 <% if @workorder %>
+<br>
 <table class="table table-bordered" width="100%">
 	<tr>
-		<td class="30%">ERP NUMBER</td>
+		<td><h4 class="text-primary text-center">Showing Results: <span class="text-danger"><%= @workorder.erpno %></span></h4></td>
+		<td>
+			<% if current_user.has_role? :admin %>
+				<a href="/workorder/<%=@workorder.id %>/change"><button class="btn btn-primary">Edit</button>
+			<% end %>
+		</td>
+	</tr>
+	<tr>
+		<td>ERP NUMBER</td>
 		<td><%=@workorder.erpno %></td>
 	</tr>
 	<tr>
@@ -34,51 +43,51 @@
 		<td><%=@workorder.clientname %></td>
 	</tr>
 	<tr>
-		<td></td>
+		<td>Site Name</td>
 		<td><%=@workorder.sitename %></td>
 	</tr>
     <tr>
-		<td></td>		
+		<td>Workorder number</td>		
 		<td><%=@workorder.workorderno %></td>
 	</tr>
 	<tr>
-		<td></td>
+		<td>Workorder date</td>
 		<td><%=@workorder.workorderdate %></td>
 	</tr>
 	<tr>
-		<td></td>
+		<td> Workorder type</td>
 		<td><%=@workorder.workorder_type %></td>
 	</tr>
 	<tr>
-		<td></td>
+		<td>Workorder value</td>
 		<td><%=@workorder.workorder_value %></td>
 	</tr>
 	<tr>
-		<td></td>
+		<td>Mobilisation Bank Gaurantee</td>
 		<td><%=@workorder.mobbg_no %></td>
 	</tr>
 	<tr>
-		<td></td>
+		<td>Mobilisation Advance Amount Received</td>
 		<td><%=@workorder.mobadv %></td>
 	</tr>
 	<tr>
-		<td></td>
+		<td>Material Advance Amount Received</td>
 		<td><%=@workorder.matadv %></td>
 	</tr>
 	<tr>
-		<td></td>
+		<td>Retention Bank Gaurantee</td>
 		<td><%=@workorder.retbg %></td>
 	</tr>
 	<tr>
-		<td></td>
+		<td>Performance Bank Gaurantee</td>
 		<td><%=@workorder.perbg %></td>
 	</tr>
 	<tr>
-		<td></td>
+		<td>Performance Warranty</td>
 		<td><%=@workorder.pwarrenty %></td>
 	</tr>
 	<tr>
-		<td></td>
+		<td>WorkOrder Completion Date</td>
 		<td><%=@workorder.workcompdate %></td>
 	</tr>
 	<tr>

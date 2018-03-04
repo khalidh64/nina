@@ -1,4 +1,4 @@
-<a href="/workorders"><button class="btn btn-primary">Back</button></a><br/><br/>
+<a href="/workorders?erpno=<%= @workorder.erpno %>"><button class="btn btn-primary">Back</button></a><br/><br/>
 <% if notice %>
 	<div class="alert alert-success alert-dismissible" role="alert">
   	 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -11,8 +11,7 @@
     <%= alert %>
   </div>
 <% end %>
-
-<%= simple_form_for @workorder, url: {:action => "create", :method => "post"}, :html => {:class => "form-horizontal"} do |f| %>
+<%= simple_form_for @workorder, url: {:action => "update", :method => "patcu"}, :html => {:class => "form-horizontal"} do |f| %>
 	<div class="row">
 		<div class="col-sm-4">
 			<%=f.input :erpno, :label => false,required: true, :placeholder => "ERP NO" %>

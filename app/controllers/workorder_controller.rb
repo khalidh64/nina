@@ -12,6 +12,19 @@ class WorkorderController < ApplicationController
   	@workorder = Workorder.new
   end
 
+  def change
+    @workorder = Workorder.find(params[:id])
+  end
+
+  def update
+    @workorder = Workorder.find(params[:id])
+    if @workorder.update_attributes(workorder_params)
+      redirect_to "/workorder/#{@workorder.id}/change", :notice => "Updated"
+    else
+      redirect_to "/workorder/#{@workorder.id}/change", :alert => "Something went wrong"
+    end
+  end
+
   def create
   	@workorder = Workorder.new(workorder_params)
     @workorder.user_id = current_user.id

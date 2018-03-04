@@ -6,10 +6,11 @@ Rails.application.routes.draw do
   root 'home#index'
   
   get '/workorders' => 'workorder#index'
-  post '/workorders/:search' => 'workorder#index'
-
+  post '/workorders/:erpno' => 'workorder#index'
   get '/addworkorder' => 'workorder#new'
   post 'create' => 'workorder#create'
+  get '/workorder/:id/change' => 'workorder#change'
+  patch 'workorder/:id/update' => 'workorder#update'
 
 
 
