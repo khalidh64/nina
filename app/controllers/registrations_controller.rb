@@ -5,17 +5,17 @@ class RegistrationsController < Devise::RegistrationsController
 		if signup_params["secure_password"] == "A12345@m"
 			if @user.valid?
 				@user.add_role :user
-	      @user.save!
-	      flash[:notice] = "Success"
-	      redirect_to root_url, :notice => "Account created successfully."
-	    else
-	      flash[:notice] = "Somthing went wrong"
-	      render :new
-	    end
-	  else
-	  	flash[:notice] = "You can't Sign up, Please contact your administrator"
-	     render :new
-	  end
+	    		@user.save!
+	      		flash[:notice] = "Success"
+	      		redirect_to root_url, :notice => "Account created successfully."
+		    else
+		      flash[:notice] = "Somthing went wrong"
+		      render :new
+		    end
+	  	else
+	  		flash[:notice] = "You can't Sign up, Please contact your administrator"
+	     	render :new
+	  	end
 	end
 
 	private

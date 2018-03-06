@@ -38,6 +38,7 @@ gem 'devise'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem "rolify"
 gem 'passenger', '~> 5.0', '>= 5.0.30'
+gem 'rails_admin', '~> 1.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
