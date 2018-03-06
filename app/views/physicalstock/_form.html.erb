@@ -1,0 +1,34 @@
+	<%= simple_form_for @stockworkorder, url: {:action => "create", :method => "post"}, :html => {:class => "form-horizontal"} do |f| %>
+	<div class="row">
+		<div class="col-sm-4">
+			<%=f.input :locno, :label => false,required: true, :placeholder => "ERP NO" %>
+		</div>
+		<div class="col-sm-4">
+			<%=f.input :erpno, :label => false, :placeholder => "Client Name" %>
+		</div>
+		<div class="col-sm-4">
+			<%=f.input :projectname, :label => false, :placeholder => "Site Name" %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4">
+			<%=f.input :projectvalue, :label => false, :placeholder => "WorkOrder Number" %>
+		</div>
+		<div class="col-sm-4">
+			<%=f.input :branch, :label => false, :placeholder => "WorkOrder Date", :input_html => {:id => "datepicker"} %>
+		</div>
+		<div class="col-sm-4">
+			<%=f.input :gmname, as: :select, required: true, collection: ["New", "Ammendment"], :label => false,  	 :prompt => "Select Work order type" %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4">
+			<%=f.input :projectincharge, :label => false, :placeholder => "Work Order Value" %>
+		</div>
+		<div class="col-sm-4">
+			<%=f.input :billingeng, :label => false, :placeholder => "Mobilisation Bank Gaurantee" %>
+		</div>
+	</div>
+
+	<%= f.submit "Submit", :class => "btn btn-primary" %>
+	<% end %>

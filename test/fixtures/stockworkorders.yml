@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  locno: MyString
+  erpno: MyString
+  projectname: MyString
+  projectvalue: MyString
+  branch: MyString
+  gmname: MyString
+  projectincharge: MyString
+  billingeng: MyString
+
+two:
+  user_id: 1
+  locno: MyString
+  erpno: MyString
+  projectname: MyString
+  projectvalue: MyString
+  branch: MyString
+  gmname: MyString
+  projectincharge: MyString
+  billingeng: MyString

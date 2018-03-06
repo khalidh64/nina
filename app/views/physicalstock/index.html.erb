@@ -1,0 +1,71 @@
+<% if notice %>
+	<div class="alert alert-success alert-dismissible" role="alert">
+  	 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= notice %>
+  </div>
+<% end %>
+<% if alert %>
+  <div class="alert alert-danger alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= alert %>
+  </div>
+<% end %>
+<div class="row">
+	<div class="col-sm-4">
+		<% if current_user.has_role? :admin %>
+			<a href="/addstockworkorder"><button class="btn btn-primary">Add Stock WorkOrder</button></a>
+		<% end %>
+	</div>
+	<div class="col-sm-8">
+		<form class="form-inline right" action="/stockworkorders">
+    		<input class="form-control col-md-6 form-control-lg" id="inputsm"  name="locno" type="text" placeholder="Enter LOC Number">&nbsp;
+    		<button class="btn btn-success" type="submit">Search</button>
+  		</form>
+  	</div>
+</div>
+
+<% if @stockworkorder %>
+<br>
+<table class="table table-bordered" width="200px">
+	<tr>
+		<td><h4 class="text-primary text-center">Showing Results: <span class="text-danger"><%= @stockworkorder.locno %></span></h4></td>
+		<td>
+			<% if current_user.has_role? :admin %>
+				<a href="/stockworkorder/<%=@stockworkorder.id %>/change"><button class="btn btn-primary">Edit</button>
+			<% end %>
+		</td>
+	</tr>
+	<tr>
+		<td>ERP Number</td>
+		<td><%=@stockworkorder.erpno %></td>
+	</tr>
+	<tr>
+		<td>Project Name</td>
+		<td><%=@stockworkorder.projectname %></td>
+	</tr>
+	<tr>
+		<td>project Value</td>
+		<td><%=@stockworkorder.projectvalue %></td>
+	</tr>
+    <tr>
+		<td>Brach</td>		
+		<td><%=@stockworkorder.branch %></td>
+	</tr>
+	<tr><td>Gm Name</td>
+		<td><%=@stockworkorder.gmname %></td>
+	</tr>
+	<tr>
+		<td>Project Incharge</td>
+		<td><%=@stockworkorder.projectincharge %></td>
+	</tr>
+	<tr>
+		<td>Billing Engineer</td>
+		<td><%=@stockworkorder.billingeng %></td>
+	</tr>
+</table>
+<% else %>
+<div class="text-center"><br><br><br>
+	<h3>No matches found</h3>
+</div>
+<% end %>
+

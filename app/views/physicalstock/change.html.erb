@@ -1,0 +1,46 @@
+<a href="/stockworkorders/?locno=<%=@stockworkorder.locno %>"><button class="btn btn-primary">Back</button></a><br/><br/>
+<% if notice %>
+	<div class="alert alert-success alert-dismissible" role="alert">
+  	 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= notice %>
+  </div>
+<% end %>
+<% if alert %>
+  <div class="alert alert-danger alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= alert %>
+  </div>
+<% end %>
+<%= simple_form_for @stockworkorder, url: {:action => "update", :method => "patch"}, :html => {:class => "form-horizontal"} do |f| %>
+	<div class="row">
+		<div class="col-sm-4">
+			<%=f.input :locno, :label => "LOC Number",required: true, :placeholder => "LOC Number" %>
+		</div>
+		<div class="col-sm-4">
+			<%=f.input :erpno, :label => "ERP Numner:", :placeholder => "ERP Numner" %>
+		</div>
+		<div class="col-sm-4">
+			<%=f.input :projectname, :label => "Project Name", :placeholder => "Project Name" %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4">
+			<%=f.input :projectvalue, :label => "Project Value", :placeholder => "Project Value" %>
+		</div>
+		<div class="col-sm-4">
+			<%=f.input :branch, :label => "Branch", :placeholder => "Branch" %>
+		</div>
+		<div class="col-sm-4">
+			<%=f.input :gmname, :label => "GM Name", :placeholder => "GM Name" %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4">
+			<%=f.input :projectincharge, :label => "Project Incharge", :placeholder => "Project Incharge" %>
+		</div>
+		<div class="col-sm-4">
+			<%=f.input :billingeng, :label => "Billing Engineer", :placeholder => "Billing Engineer" %>
+		</div>
+	</div>
+		<%= f.submit "Submit", :class => "btn btn-primary" %>
+<% end %>

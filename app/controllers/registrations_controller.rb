@@ -4,7 +4,7 @@ class RegistrationsController < Devise::RegistrationsController
 		puts signup_params["secure_password"]
 		if signup_params["secure_password"] == "A12345@m"
 			if @user.valid?
-				@user.add_role :admin
+				@user.add_role :user
 	      @user.save!
 	      flash[:notice] = "Success"
 	      redirect_to root_url, :notice => "Account created successfully."
