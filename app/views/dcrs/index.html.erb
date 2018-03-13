@@ -1,0 +1,79 @@
+<table class="table table-bordered">
+	<tr class="bg-danger">
+		<th>Date</th>
+		<th>Dc number</th>
+		<th>Cumulative Received Qty </th>
+		<th>Received Qty</th>
+		<th>Cumulative Consumption Qty</th>
+		<th>Consumption Qty</th>
+		<th>Balance at site</th>
+		<th>remarks</th>
+		<th></th>
+	</tr>
+	<tr class="bg-success">
+		<td></td>
+		<td></td>
+		<td><%= @itemlist.cumrecqtystart %></td>
+		<td></td>
+		<td><%= @itemlist.cumconqtystart %></td>
+		<td></td>
+		<td><%= @itemlist.balatsitestart %></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<% @dcrs.each do |d| %>
+		<% if Date.today.strftime("%m-%d-%Y").to_s == d.date %>
+			<% color = "" %>
+		<%else %>
+			<% color = "#c8c8c8" %>
+		<% end %>
+		<tr style="background-color: <%= color %>">
+			<td><%= d.date %></td>
+			<td><%= d.dcnumber %></td>
+			<td><%= d.cumrecqty %></td>
+			<td><%= d.recqty %></td>
+			<td><%= d.cumconqty %></td>
+			<td><%= d.cons %></td>
+			<td><%= d.balatsite %></td>
+			<td><%= d.remarks %></td>
+			<td>
+				<% if Date.today.strftime("%m-%d-%Y").to_s == d.date %>
+					<a id="edit"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Edit</button></a>
+				<%else %>
+				<% end %>
+			</td>
+		</tr>
+	<% end %>
+</table>
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        <%= simple_form_for @dcr, :url =>{:action => 'dcrupdate', :method =>'patch'} do |f|%>
+        	<%= f.hidden_field :itemlist_id, :value => params[:id] %>
+        	<%= f.hidden_field :id, :value => f.object.id%>
+        	<%= f.input :dcnumber, :label => "DC Number" %>
+			<%= f.input :recqty, :label => "Received qty"%>
+			<%= f.input :cons, :label => "Consumption qty"%>
+			<%= f.input :remarks, :label => "Remarks"%>
+			<%= f.submit "Update", :class => "btn btn-primary" %>
+		<% end %>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>

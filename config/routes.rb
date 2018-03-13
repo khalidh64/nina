@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'dcrs/index'
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, :controllers => { :registrations => "registrations"}
   
@@ -19,6 +21,11 @@ Rails.application.routes.draw do
   post '/physicalstock/create' => 'physicalstock#create'
   get '/stockworkorder/:id/change' => 'physicalstock#change'
   patch '/physicalstock/:id/update' => 'physicalstock#update'
+
+  ################# Dcrs ######################
+  get '/dcrs/:id' => 'dcrs#index'
+  get '/dcr/today/change' => 'dcrs#today_change'
+  patch 'dcrupdate' => 'dcrs#dcrupdate'
 
 
 

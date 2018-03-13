@@ -8,10 +8,16 @@
 <% if alert %>
   <div class="alert alert-danger alert-dismissible" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <%= alert %>
+    <% alert.each do |e,v| %>
+    	<% if e == "locno" %>
+    		<%= v[0] %><br>
+    	<% else %>
+    		<%=  "#{e} #{v}" %><br>
+    	<% end %>
+    <% end %>
   </div>
 <% end %>
-<%= simple_form_for @stockworkorder, url: {:action => "update", :method => "patch"}, :html => {:class => "form-horizontal"} do |f| %>
+<%= simple_nested_form_for @stockworkorder, url: {:action => "update", :method => "patch"}, :html => {:class => "form-horizontal"} do |f| %>
 	<div class="row">
 		<div class="col-sm-4">
 			<%=f.input :locno, :label => "LOC Number",required: true, :placeholder => "LOC Number" %>
@@ -42,5 +48,80 @@
 			<%=f.input :billingeng, :label => "Billing Engineer", :placeholder => "Billing Engineer" %>
 		</div>
 	</div>
-		<%= f.submit "Submit", :class => "btn btn-primary" %>
+	
+	<%= f.fields_for :itemlists do |t| %><br>
+		<div style="margin:0% 3% 0% 3%">
+			<div class="card card-block">
+				<div class="row" style="margin-left:2%;background-color: lightblue">
+					<div class="3">
+				  		<%= t.input :itemno, :label =>false, :placeholder => "Item Number" %>
+				  	</div>
+				  	<div class="3">
+				  		<%= t.input :itemname, :label =>false, :placeholder => "Item Name" %>
+				  	</div>
+				  	<div class="3">
+				  		<%= t.input :units, :label =>false, collection: [ "Sqm", "Rmt", "Kgs","Nos","Grams","Lts","Packs","Cum","Brass"], :prompt => "Select Units" %>
+				  	</div>
+				  	<div class="3">
+				  		<%= t.input :matqty, :label =>false, :placeholder => "Matrial Quantity" %>
+				  	</div>
+				  	<div class="row" style="margin-left:2%">
+					<div class="3">
+				  		<%= t.input :cumrecqtystart, :label =>false, :placeholder => "Cumulative received qty start total" %>
+				  	</div>
+				  	<div class="3">
+				  		<%= t.input :cumconqtystart, :label =>false, :placeholder => "Cumulative consumption qty start total" %>
+				  	</div>
+				  	<div class="3">
+				  		<%= t.input :balatsitestart, :label =>false, :placeholder => "Balance at site start total" %>
+				  	</div>
+				  	<div class="col-sm-3">
+				  		<%= t.link_to_remove "Remove Item" %>
+				  	</div>
+				  </div>
+				</div>
+			<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample<%=t.object.id %>" aria-expanded="false" aria-controls="collapseExample">Show Data</button>
+			<div class="collapse" id="collapseExample<%= t.object.id %>">
+			<%= t.fields_for :dcrs do |d| %><br>
+				<div style="margin:0% 3% 0% 3%">
+					<div class="card card-block">
+						<div class="row" style="margin:2% 0 0 2%">
+							<div class="3">
+					  			<%= d.input :month, :label =>false, collection: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], :prompt => "Select Month", :selected => "#{Date.today.strftime("%B")}" %>
+					  		</div>
+					  		<div class="3">
+					  			<%= d.input :year, :label =>false, input_html: {value: d.object.year || Date.today.strftime("%Y")} %>
+					  		</div>
+					  		<div class="3">
+					  			<%= d.input :date, :label =>false, :placeholder => "Date" %>
+					  		</div>
+					  		<div class="3">
+					  			<%= d.input :cumrecqty, :label =>false, :placeholder => "Cum Rec Qty" %>
+					  		</div>
+					  	</div>
+					  	<div class="row" style="margin:2% 0 0 2%">
+					  		<div class="3">
+					  			<%= d.input :recqty, :label =>false, :placeholder =>"Rec Qty" %>
+					  		</div>
+					  		<div class="3">
+					  			<%= d.input :cumconqty, :label =>false,:placeholder => "Cum Cons Qty" %>
+					  		</div>
+					  		<div class="3">
+					  			<%= d.input :cons, :label =>false, :placeholder =>"Cons" %>
+					  		</div>
+					  		<div class="3">
+					  			<%= d.input :balatsite, :label =>false, :placeholder =>"Bal At Site" %>
+					  		</div>
+					  		<%= d.link_to_remove "Remove DCR" %>
+					  	</div>
+				  	</div>
+				</div>
+				<br><% end %>
+			<p><%= t.link_to_add "Add DCR", :dcrs %></p>
+		</div>
+		</div>
+		</div>
+			<br><% end %>
+		<p><%= f.link_to_add "Add Itemlist", :itemlists %></p>
+		<%= f.submit "Submit", :class => "btn btn-primary" %>	
 <% end %>

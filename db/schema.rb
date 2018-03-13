@@ -10,7 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180305175654) do
+ActiveRecord::Schema.define(version: 20180311132751) do
+
+  create_table "dcrs", force: :cascade do |t|
+    t.integer "itemlist_id"
+    t.integer "stockworkorder_id"
+    t.string "date"
+    t.integer "cumrecqty"
+    t.integer "recqty"
+    t.integer "cumconqty"
+    t.integer "cons"
+    t.integer "balatsite"
+    t.string "month"
+    t.integer "year"
+    t.integer "premonthbal"
+    t.integer "presentbal"
+    t.text "remarks"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "cumrecqtytotal"
+    t.integer "cumconqtytotal"
+    t.integer "balatsitetotal"
+    t.string "dcnumber"
+    t.index ["itemlist_id"], name: "index_dcrs_on_itemlist_id"
+    t.index ["stockworkorder_id"], name: "index_dcrs_on_stockworkorder_id"
+  end
+
+  create_table "itemlists", force: :cascade do |t|
+    t.integer "stockworkorder_id"
+    t.string "itemno"
+    t.string "itemname"
+    t.string "units"
+    t.integer "matqty"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "cumrecqtystart"
+    t.integer "cumconqtystart"
+    t.integer "balatsitestart"
+    t.index ["stockworkorder_id"], name: "index_itemlists_on_stockworkorder_id"
+  end
 
   create_table "roles", force: :cascade do |t|
     t.string "name"

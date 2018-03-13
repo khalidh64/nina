@@ -24,7 +24,7 @@ class WorkorderController < ApplicationController
         @workorder.save!
         redirect_to workorders_path, :notice=> "Workorder created."
       else
-        redirect_to :back, :alert => @order.errors
+        redirect_back fallback_location: root_path, :alert => @workorder.errors
       end
     else
       redirect_to workorders_path
@@ -45,10 +45,10 @@ class WorkorderController < ApplicationController
       if @workorder.update_attributes(workorder_params)
         redirect_to "/workorder/#{@workorder.id}/change", :notice => "Updated"
       else
-        redirect_to "/workorder/#{@workorder.id}/change", :alert => "Something went wrong"
+        redirect_back fallback_location: workorders_path, :alert => @workorder.errors
       end
     else
-      redirect_to workorders_path
+      redirect_back fallback_location: workorders_path, :alert => @workorder.errors
     end
   end
 

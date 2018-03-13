@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stockworkorders: one
+  itemno: MyString
+  itemname: MyString
+  units: MyString
+  matqty: 1
+
+two:
+  stockworkorders: two
+  itemno: MyString
+  itemname: MyString
+  units: MyString
+  matqty: 1

@@ -8,7 +8,13 @@
 <% if alert %>
   <div class="alert alert-danger alert-dismissible" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <%= alert %>
+    <% alert.each do |e,v| %>
+    	<% if e == "erpno" %>
+    		<%= v[0] %><br>
+    	<% else %>
+    		<%=  "#{e} #{v}" %><br>
+    	<% end %>
+    <% end %>
   </div>
 <% end %>
 
