@@ -52,31 +52,33 @@
 	<%= f.fields_for :itemlists do |t| %><br>
 		<div style="margin:0% 3% 0% 3%">
 			<div class="card card-block">
-				<div class="row" style="margin-left:2%;background-color: lightblue">
+				<div class="row" style="margin-left:2%;">
 					<div class="3">
-				  		<%= t.input :itemno, :label =>false, :placeholder => "Item Number" %>
+						<div class="card card-block">
+				  		<%= t.input :itemno, :label =>"Item Number", :placeholder => "Item Number" %>
+				  	</div>
 				  	</div>
 				  	<div class="3">
-				  		<%= t.input :itemname, :label =>false, :placeholder => "Item Name" %>
+				  		<%= t.input :itemname, :label =>"Item Name", :placeholder => "Item Name" %>
 				  	</div>
 				  	<div class="3">
-				  		<%= t.input :units, :label =>false, collection: [ "Sqm", "Rmt", "Kgs","Nos","Grams","Lts","Packs","Cum","Brass"], :prompt => "Select Units" %>
+				  		<%= t.input :units, :label =>"Units", collection: [ "Sqm", "Rmt", "Kgs","Nos","Grams","Lts","Packs","Cum","Brass"], :prompt => "Select Units" %>
 				  	</div>
 				  	<div class="3">
-				  		<%= t.input :matqty, :label =>false, :placeholder => "Matrial Quantity" %>
+				  		<%= t.input :matqty, :label =>"Matrial Quantity", :placeholder => "Matrial Quantity" %>
 				  	</div>
-				  	<div class="row" style="margin-left:2%">
+				  	<div class="row">
 					<div class="3">
-				  		<%= t.input :cumrecqtystart, :label =>false, :placeholder => "Cumulative received qty start total" %>
+				  		<%= t.input :cumrecqtystart, :label =>"Cum rec qty starttotal", :placeholder => "Cumulative received qty start total" %>
 				  	</div>
 				  	<div class="3">
-				  		<%= t.input :cumconqtystart, :label =>false, :placeholder => "Cumulative consumption qty start total" %>
+				  		<%= t.input :cumconqtystart, :label =>"Cum con qty starttotal", :placeholder => "Cumulative consumption qty start total" %>
 				  	</div>
 				  	<div class="3">
-				  		<%= t.input :balatsitestart, :label =>false, :placeholder => "Balance at site start total" %>
+				  		<%= t.input :balatsitestart, :label =>"Bal at site starttotal", :placeholder => "Balance at site start total" %>
 				  	</div>
 				  	<div class="col-sm-3">
-				  		<%= t.link_to_remove "Remove Item" %>
+				  		<%= t.link_to_remove "Remove Item", :type => "button", :class => "btn btn-dark" %>
 				  	</div>
 				  </div>
 				</div>
@@ -87,41 +89,48 @@
 					<div class="card card-block">
 						<div class="row" style="margin:2% 0 0 2%">
 							<div class="3">
-					  			<%= d.input :month, :label =>false, collection: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], :prompt => "Select Month", :selected => "#{Date.today.strftime("%B")}" %>
+					  			<%= d.input :month, :label =>"Month", collection: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], :prompt => "Select Month" %>
 					  		</div>
 					  		<div class="3">
-					  			<%= d.input :year, :label =>false, input_html: {value: d.object.year || Date.today.strftime("%Y")} %>
+					  			<%= d.input :year, :label =>"Year", input_html: {value: d.object.year || Date.today.strftime("%Y")} %>
 					  		</div>
 					  		<div class="3">
-					  			<%= d.input :date, :label =>false, :placeholder => "Date" %>
+					  			<%= d.input :date, :label =>"date", :placeholder => "Date" %>
 					  		</div>
 					  		<div class="3">
-					  			<%= d.input :cumrecqty, :label =>false, :placeholder => "Cum Rec Qty" %>
+					  			<%= d.input :cumrecqty, :label =>"Cum Rec qty", :placeholder => "Cum Rec Qty" %>
 					  		</div>
 					  	</div>
 					  	<div class="row" style="margin:2% 0 0 2%">
 					  		<div class="3">
-					  			<%= d.input :recqty, :label =>false, :placeholder =>"Rec Qty" %>
+					  			<%= d.input :recqty, :label =>"Rec Qty", :placeholder =>"Rec Qty" %>
 					  		</div>
 					  		<div class="3">
-					  			<%= d.input :cumconqty, :label =>false,:placeholder => "Cum Cons Qty" %>
+					  			<%= d.input :cumconqty, :label =>"Cum Con qty",:placeholder => "Cum Cons Qty" %>
 					  		</div>
 					  		<div class="3">
-					  			<%= d.input :cons, :label =>false, :placeholder =>"Cons" %>
+					  			<%= d.input :cons, :label =>"Con qty", :placeholder =>"Cons" %>
 					  		</div>
 					  		<div class="3">
-					  			<%= d.input :balatsite, :label =>false, :placeholder =>"Bal At Site" %>
+					  			<%= d.input :balatsite, :label =>"Bal at site", :placeholder =>"Bal At Site" %>
 					  		</div>
-					  		<%= d.link_to_remove "Remove DCR" %>
+					  		
 					  	</div>
 				  	</div>
+				  	<%= d.link_to_remove "Remove DCR", :type => "button", :class => "btn btn-danger" %>
 				</div>
 				<br><% end %>
-			<p><%= t.link_to_add "Add DCR", :dcrs %></p>
+			<p><%= t.link_to_add "Add DCR", :dcrs, :type => "button", :class => "btn btn-success" %></p>
 		</div>
 		</div>
 		</div>
 			<br><% end %>
-		<p><%= f.link_to_add "Add Itemlist", :itemlists %></p>
-		<%= f.submit "Submit", :class => "btn btn-primary" %>	
+		<p><%= f.link_to_add "Add Itemlist", :itemlists, :type => "button", :class => "btn btn-success"  %></p>
+
+		<div class="form-row text-center">
+    		<div class="col-12">
+        		<%= f.submit "Submit", :class => "btn btn-primary" %>
+    		</div>
+ 		</div>
 <% end %>
+<br>

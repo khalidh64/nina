@@ -1,3 +1,52 @@
+<div class="container">
+<div class="row">
+	
+		<table class="table table-bordered">
+			<!-- <tr>
+				<td colspan="2"><h4 class="text-primary text-center">Showing Results: <span class="text-danger"><%= @stockworkorder.locno %></span></h4></td>
+			</tr> -->
+			<tr>
+				<td>ERP Number</td>
+				<td><%=@stockworkorder.erpno %></td>
+			</tr>
+			<tr>
+				<td>Project Name</td>
+				<td><%=@stockworkorder.projectname %></td>
+			</tr>
+			<tr>
+				<td>project Value</td>
+				<td><%=@stockworkorder.projectvalue %></td>
+			</tr>
+		    <tr>
+				<td>Branch</td>		
+				<td><%=@stockworkorder.branch %></td>
+			</tr>
+			<tr><td>Gm Name</td>
+				<td><%=@stockworkorder.gmname %></td>
+			</tr>
+			<tr>
+				<td>Project Incharge</td>
+				<td><%=@stockworkorder.projectincharge %></td>
+			</tr>
+			<tr>
+				<td>Billing Engineer</td>
+				<td><%=@stockworkorder.billingeng %></td>
+			</tr>
+		</table>
+</div>
+</div>
+<% if notice %>
+	<div class="alert alert-success alert-dismissible" role="alert">
+  	 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= notice %>
+  </div>
+<% end %>
+<% if alert %>
+  <div class="alert alert-danger alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= alert %>
+  </div>
+<% end %>
 <table class="table table-bordered">
 	<tr class="bg-danger">
 		<th>Date</th>
@@ -13,11 +62,26 @@
 	<tr class="bg-success">
 		<td></td>
 		<td></td>
-		<td><%= @itemlist.cumrecqtystart %></td>
+		<td><% if @predata.blank? %>
+				<%= @itemlist.cumrecqtystart %>
+			<% else %>
+				<%= @predata.cumrecqtytotal %>
+			<% end %>
+		</td>
 		<td></td>
-		<td><%= @itemlist.cumconqtystart %></td>
+		<td><% if @predata.blank? %>
+				<%= @itemlist.cumconqtystart %>
+			<% else %>
+				<%= @predata.cumconqtytotal %>
+			<% end %>
+		</td>
 		<td></td>
-		<td><%= @itemlist.balatsitestart %></td>
+		<td><% if @predata.blank? %>
+				<%= @itemlist.balatsitestart %>
+			<% else %>
+				<%= @predata.balatsitetotal %>
+			<% end %>
+		</td>
 		<td></td>
 		<td></td>
 	</tr>
@@ -65,14 +129,18 @@
 			<%= f.input :recqty, :label => "Received qty"%>
 			<%= f.input :cons, :label => "Consumption qty"%>
 			<%= f.input :remarks, :label => "Remarks"%>
-			<%= f.submit "Update", :class => "btn btn-primary" %>
+			<div class="form-row text-center">
+    			<div class="col-12">
+        			<%= f.submit "Update", :class => "btn btn-primary" %>
+    			</div>
+ 			</div>
 		<% end %>
         </div>
         
         <!-- Modal footer -->
-        <div class="modal-footer">
+        <!-- <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        </div>
+        </div> -->
         
       </div>
     </div>

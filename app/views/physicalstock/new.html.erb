@@ -77,12 +77,17 @@
 				  		<%= t.input :balatsitestart, :label =>false, :placeholder => "Balance at site start total" %>
 				  	</div>
 				  	<div class="col-sm-3">
-				  		<%= t.link_to_remove "Remove Item" %>
+				  		<%= t.link_to_remove "Remove Item", :type => "button", :class => "btn btn-dark" %>
 				  	</div>
 				</div>
 		</div>
 		</div>
 			<br><% end %>
-		<p><%= f.link_to_add "Add Itemlist", :itemlists %></p>
-		<%= f.submit "Submit", :class => "btn btn-primary" %>	
+		<p><%= f.link_to_add "Add Itemlist", :itemlists, :type => "button", :class => "btn btn-success"  %></p><br>
+		<div class="form-row text-center">
+    		<div class="col-12">
+        		<%= f.submit "Submit", :class => "btn btn-primary" %>
+    		</div>
+ 		</div>
+		
 <% end %>
