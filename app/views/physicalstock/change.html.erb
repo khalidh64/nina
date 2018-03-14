@@ -34,18 +34,18 @@
 			<%=f.input :projectvalue, :label => "Project Value", :placeholder => "Project Value" %>
 		</div>
 		<div class="col-sm-4">
-			<%=f.input :branch, :label => "Branch", :placeholder => "Branch" %>
+			<%=f.input :branch, collection:["HYD- Hyderabad","VIJ- Vijayawada"], :label => false, :prompt => "Select Branch" %>
 		</div>
 		<div class="col-sm-4">
-			<%=f.input :gmname, :label => "GM Name", :placeholder => "GM Name" %>
+			<%=f.input :gmname, collection:["970070-Ananta Das"], :label => false, :prompt => "Select GM" %>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-sm-4">
-			<%=f.input :projectincharge, :label => "Project Incharge", :placeholder => "Project Incharge" %>
+			<%=f.input :projectincharge, collection:["970157-Syed Arif Hussain","970080-Mohd Irshad","970091-Vishwanath Naidu","970127-Tirthatarun Mukhopadhyay","970147-Mohd Salman Sayeed","970090-Mahesh Siddappa Kamble","Mohd Firoz","Shyam Sundar"], :label => false, :prompt => "Select Project Incharge" %>
 		</div>
 		<div class="col-sm-4">
-			<%=f.input :billingeng, :label => "Billing Engineer", :placeholder => "Billing Engineer" %>
+			<%=f.input :billingeng, collection: ["970205- Santosh Kumar Vadla","970389- Jitendra Kawde","970147- Mohd Salman Sayeed","970406- Altaf Hussain Shaik","970367- Mohan Kumar N"], :label => false, :prompt => "Select Billing Incharge" %>
 		</div>
 	</div>
 	
