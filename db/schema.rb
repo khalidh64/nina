@@ -10,50 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180311132751) do
+ActiveRecord::Schema.define(version: 20180314212734) do
 
-  create_table "dcrs", force: :cascade do |t|
-    t.integer "itemlist_id"
-    t.integer "stockworkorder_id"
+  create_table "dcrs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "itemlist_id"
+    t.bigint "stockworkorder_id"
     t.string "date"
-    t.integer "cumrecqty"
-    t.integer "recqty"
-    t.integer "cumconqty"
-    t.integer "cons"
-    t.integer "balatsite"
+    t.decimal "cumrecqty", precision: 20, scale: 10
+    t.decimal "recqty", precision: 20, scale: 10
+    t.decimal "cumconqty", precision: 20, scale: 10
+    t.decimal "cons", precision: 20, scale: 10
+    t.decimal "balatsite", precision: 20, scale: 10
     t.string "month"
     t.integer "year"
-    t.integer "premonthbal"
-    t.integer "presentbal"
+    t.decimal "premonthbal", precision: 20, scale: 10
+    t.decimal "presentbal", precision: 20, scale: 10
     t.text "remarks"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "cumrecqtytotal"
-    t.integer "cumconqtytotal"
-    t.integer "balatsitetotal"
+    t.decimal "cumrecqtytotal", precision: 20, scale: 10
+    t.decimal "cumconqtytotal", precision: 20, scale: 10
+    t.decimal "balatsitetotal", precision: 20, scale: 10
     t.string "dcnumber"
     t.index ["itemlist_id"], name: "index_dcrs_on_itemlist_id"
     t.index ["stockworkorder_id"], name: "index_dcrs_on_stockworkorder_id"
   end
 
-  create_table "itemlists", force: :cascade do |t|
-    t.integer "stockworkorder_id"
+  create_table "itemlists", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "stockworkorder_id"
     t.string "itemno"
     t.string "itemname"
     t.string "units"
-    t.integer "matqty"
+    t.decimal "matqty", precision: 20, scale: 10
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "cumrecqtystart"
-    t.integer "cumconqtystart"
-    t.integer "balatsitestart"
+    t.decimal "cumrecqtystart", precision: 20, scale: 10
+    t.decimal "cumconqtystart", precision: 20, scale: 10
+    t.decimal "balatsitestart", precision: 20, scale: 10
     t.index ["stockworkorder_id"], name: "index_itemlists_on_stockworkorder_id"
   end
 
-  create_table "roles", force: :cascade do |t|
+  create_table "roles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.string "resource_type"
-    t.integer "resource_id"
+    t.bigint "resource_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 20180311132751) do
     t.index ["resource_type", "resource_id"], name: "index_roles_on_resource_type_and_resource_id"
   end
 
-  create_table "stockworkorders", force: :cascade do |t|
+  create_table "stockworkorders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "user_id"
     t.string "locno"
     t.string "erpno"
@@ -73,9 +73,10 @@ ActiveRecord::Schema.define(version: 20180311132751) do
     t.string "billingeng"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "state"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -97,15 +98,15 @@ ActiveRecord::Schema.define(version: 20180311132751) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "users_roles", id: false, force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "role_id"
+  create_table "users_roles", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
+    t.bigint "role_id"
     t.index ["role_id"], name: "index_users_roles_on_role_id"
     t.index ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id"
     t.index ["user_id"], name: "index_users_roles_on_user_id"
   end
 
-  create_table "workorders", force: :cascade do |t|
+  create_table "workorders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "erpno"
     t.string "clientname"
     t.string "sitename"
@@ -127,4 +128,7 @@ ActiveRecord::Schema.define(version: 20180311132751) do
     t.integer "admin_id"
   end
 
+  add_foreign_key "dcrs", "itemlists"
+  add_foreign_key "dcrs", "stockworkorders"
+  add_foreign_key "itemlists", "stockworkorders"
 end

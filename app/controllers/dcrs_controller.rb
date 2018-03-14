@@ -1,7 +1,7 @@
 class DcrsController < ApplicationController
-	require 'date'
+  require 'date'
   def index
-  	if params[:id]
+    if params[:id]
         @itemlist = Itemlist.find_by_id(params[:id])
         @dcrs = Dcr.where(:itemlist_id => params[:id], :month =>Date.today.strftime("%B"))
         @dcr = Dcr.where(:date => Date.today.strftime("%m-%d-%Y").to_s, :itemlist_id => params[:id]).last
@@ -42,23 +42,21 @@ class DcrsController < ApplicationController
 
   def dcrupdate
     @itemlist = Itemlist.find_by_id(dcr_params["itemlist_id"])
-  	@dcr = Dcr.find_by_id(dcr_params[:id])
-    puts @dcr.date
-    puts @dcr.cumrecqty
-
-    if dcr_params[:recqty].to_i == @dcr.recqty
+    @dcr = Dcr.find_by_id(dcr_params[:id])
+    puts @dcr.recqty.class
+    if dcr_params[:recqty].to_f == @dcr.recqty
       cumrecqtytotal = @dcr.cumrecqty
     else
-        cumrecqtytotal = (@dcr.cumrecqty - @dcr.recqty) + dcr_params[:recqty].to_i
+        cumrecqtytotal = (@dcr.cumrecqty - @dcr.recqty) + dcr_params[:recqty].to_f
     end
 
-    if dcr_params[:cons].to_i == @dcr.cons
+    if dcr_params[:cons].to_f == @dcr.cons
       cumconqtytotal = @dcr.cumconqty
     else
-        cumconqtytotal = (@dcr.cumconqty - @dcr.cons) + dcr_params[:cons].to_i
+        cumconqtytotal = (@dcr.cumconqty - @dcr.cons) + dcr_params[:cons].to_f
     end
 
-    if (dcr_params[:cons].to_i == @dcr.cons && dcr_params[:recqty].to_i == @dcr.recqty)
+    if (dcr_params[:cons].to_f == @dcr.cons && dcr_params[:recqty].to_f == @dcr.recqty)
       balatsitetotal = @dcr.balatsite
     else
       balatsitetotal = cumrecqtytotal - cumconqtytotal
@@ -75,15 +73,15 @@ class DcrsController < ApplicationController
          :balatsitetotal=>balatsitetotal,
          :cumrecqty => cumrecqtytotal,:cumconqty => cumconqtytotal,:balatsite=>balatsitetotal)
       end
-  	
-    	redirect_back fallback_location: root_path, :notice => "updated"
-  	else
-  		redirect_back fallback_location: root_path, :alert => "Error: Please try again."
-  	end
+    
+      redirect_back fallback_location: root_path, :notice => "updated"
+    else
+      redirect_back fallback_location: root_path, :alert => "Error: Please try again."
+    end
   end
 
   private
   def dcr_params
-  	params.require(:dcr).permit(:id,:itemlist_id,:recqty,:cons,:remarks,:dcnumber)
+    params.require(:dcr).permit(:id,:itemlist_id,:recqty,:cons,:remarks,:dcnumber)
   end
 end

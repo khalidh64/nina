@@ -47,6 +47,9 @@
 		<div class="col-sm-4">
 			<%=f.input :billingeng, collection: ["970205- Santosh Kumar Vadla","970389- Jitendra Kawde","970147- Mohd Salman Sayeed","970406- Altaf Hussain Shaik","970367- Mohan Kumar N"], :label => false, :prompt => "Select Billing Incharge" %>
 		</div>
+		<div class="col-sm-4">
+			<%=f.input :state, collection: ["AP- Andhra Pradesh", "TEL- Telangana"], :label => false, :prompt => "Select State" %>
+		</div>
 	</div>
 	
 	<%= f.fields_for :itemlists do |t| %><br>
