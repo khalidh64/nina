@@ -1,147 +1,224 @@
-<div class="container">
-<div class="row">
-	
-		<table class="table table-bordered">
-			<!-- <tr>
-				<td colspan="2"><h4 class="text-primary text-center">Showing Results: <span class="text-danger"><%= @stockworkorder.locno %></span></h4></td>
-			</tr> -->
-			<tr>
-				<td>ERP Number</td>
-				<td><%=@stockworkorder.erpno %></td>
-			</tr>
-			<tr>
-				<td>Project Name</td>
-				<td><%=@stockworkorder.projectname %></td>
-			</tr>
-			<tr>
-				<td>project Value</td>
-				<td><%=@stockworkorder.projectvalue %></td>
-			</tr>
-		    <tr>
-				<td>Branch</td>		
-				<td><%=@stockworkorder.branch %></td>
-			</tr>
-			<tr><td>Gm Name</td>
-				<td><%=@stockworkorder.gmname %></td>
-			</tr>
-			<tr>
-				<td>Project Incharge</td>
-				<td><%=@stockworkorder.projectincharge %></td>
-			</tr>
-			<tr>
-				<td>Billing Engineer</td>
-				<td><%=@stockworkorder.billingeng %></td>
-			</tr>
-		</table>
-</div>
-</div>
-<% if notice %>
-	<div class="alert alert-success alert-dismissible" role="alert">
-  	 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <%= notice %>
-  </div>
-<% end %>
-<% if alert %>
-  <div class="alert alert-danger alert-dismissible" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <%= alert %>
-  </div>
-<% end %>
-<table class="table table-bordered">
-	<tr class="bg-danger">
-		<th>Date</th>
-		<th>Dc number</th>
-		<th>Cumulative Received Qty </th>
-		<th>Received Qty</th>
-		<th>Cumulative Consumption Qty</th>
-		<th>Consumption Qty</th>
-		<th>Balance at site</th>
-		<th>remarks</th>
-		<th></th>
-	</tr>
-	<tr class="bg-success">
-		<td></td>
-		<td></td>
-		<td><% if @predata.blank? %>
-				<%= @itemlist.cumrecqtystart %>
-			<% else %>
-				<%= @predata.cumrecqtytotal %>
+<div class="container-fluid">
+	<div class="container">
+		<div class="card text-left">
+		  <div class="card-header bg-info text-white text-center">
+		    <h4>Project Details</h4>
+		  </div>
+		  <div class="card-body">
+		    <!-- <h5 class="card-title text-center">Special title treatment</h5> -->
+		    <p class="card-text">
+		    	<div class="row">
+					<div class="col-sm-6">
+						ERP Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b><%=@stockworkorder.erpno.capitalize %></b>
+					</div>
+					<div class="col-sm-6">
+						Project Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b><%=@stockworkorder.projectname.capitalize %></b>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						project Value: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><%=@stockworkorder.projectvalue.capitalize %></b>
+					</div>
+					<div class="col-sm-6">
+						Branch:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b><%=@stockworkorder.branch.capitalize %></b> 
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-6">
+						Gm Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b><%=@stockworkorder.gmname.capitalize %></b>
+					</div>
+					<div class="col-sm-6">
+						Project Incharge:&nbsp;&nbsp; <b><%=@stockworkorder.projectincharge.capitalize %></b>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						Billing Engineer: &nbsp;<b><%=@stockworkorder.billingeng %></b>
+					</div>
+					<div class="col-sm-6">
+						Project Created: &nbsp;&nbsp;&nbsp;<b><%=@stockworkorder.created_at.strftime("#{@stockworkorder.created_at.strftime('%d').to_i.ordinalize}-%B-%Y") %></b>
+					</div>
+				</div>
+		    </p>
+		    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+		  </div>
+		  <div class="card-footer text-muted text-center">
+		  	:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b><%= Date.today.strftime("%B-%Y") %></b> Data Displaying
+		    
+		  </div>
+		</div>
+	</div>
+	<br>
+	<% if notice %>
+		<div class="alert alert-success alert-dismissible" role="alert">
+	  	 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	    <%= notice %>
+	  </div>
+	<% end %>
+	<% if alert %>
+	  <div class="alert alert-danger alert-dismissible" role="alert">
+	    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	    <%= alert %>
+	  </div>
+	<% end %>
+
+	<table class="table table-bordered">
+		<tr class="bg-info">
+			<th width="9%">Date</th>
+			<th>Dc number</th>
+			<th>Cumulative Received Qty </th>
+			<th>Received Qty</th>
+			<th>Cumulative Consumption Qty</th>
+			<th>Consumption Qty</th>
+			<th>Balance at site</th>
+			<th>remarks</th>			
+			<% if current_user.has_role? :admin %>
+				<th>Edited By</th>
 			<% end %>
-		</td>
-		<td></td>
-		<td><% if @predata.blank? %>
-				<%= @itemlist.cumconqtystart %>
-			<% else %>
-				<%= @predata.cumconqtytotal %>
+			<% if !current_user.has_role? :normaluser %>
+				<th></th>
 			<% end %>
-		</td>
-		<td></td>
-		<td><% if @predata.blank? %>
-				<%= @itemlist.balatsitestart %>
-			<% else %>
-				<%= @predata.balatsitetotal %>
-			<% end %>
-		</td>
-		<td></td>
-		<td></td>
-	</tr>
-	<% @dcrs.each do |d| %>
-		<% if Date.today.strftime("%m-%d-%Y").to_s == d.date %>
-			<% color = "" %>
-		<%else %>
-			<% color = "#c8c8c8" %>
-		<% end %>
-		<tr style="background-color: <%= color %>">
-			<td><%= d.date %></td>
-			<td><%= d.dcnumber %></td>
-			<td><%= d.cumrecqty %></td>
-			<td><%= d.recqty %></td>
-			<td><%= d.cumconqty %></td>
-			<td><%= d.cons %></td>
-			<td><%= d.balatsite %></td>
-			<td><%= d.remarks %></td>
-			<td>
-				<% if Date.today.strftime("%m-%d-%Y").to_s == d.date %>
-					<a id="edit"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Edit</button></a>
-				<%else %>
+
+		</tr>
+		<tr class="bg-success">
+			<td></td>
+			<td></td>
+			<td><% if @predata.blank? %>
+					<%= @itemlist.cumrecqtystart %>
+				<% else %>
+					<%= @predata.cumrecqtytotal %>
 				<% end %>
 			</td>
-		</tr>
-	<% end %>
-</table>
+			<td></td>
+			<td><% if @predata.blank? %>
+					<%= @itemlist.cumconqtystart %>
+				<% else %>
+					<%= @predata.cumconqtytotal %>
+				<% end %>
+			</td>
+			<td></td>
+			<td><% if @predata.blank? %>
+					<%= @itemlist.balatsitestart %>
+				<% else %>
+					<%= @predata.balatsitetotal %>
+				<% end %>
+			</td>
+			<td></td>
+			<% if !current_user.has_role? :normaluser %>
+				<td></td>
+				<td></td>
 
-<div class="modal fade" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-      
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title"></h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        
-        <!-- Modal body -->
-        <div class="modal-body">
-        <%= simple_form_for @dcr, :url =>{:action => 'dcrupdate', :method =>'patch'} do |f|%>
-        	<%= f.hidden_field :itemlist_id, :value => params[:id] %>
-        	<%= f.hidden_field :id, :value => f.object.id%>
-        	<%= f.input :dcnumber, :label => "DC Number" %>
-			<%= f.input :recqty, :label => "Received qty"%>
-			<%= f.input :cons, :label => "Consumption qty"%>
-			<%= f.input :remarks, :label => "Remarks"%>
-			<div class="form-row text-center">
-    			<div class="col-12">
-        			<%= f.submit "Update", :class => "btn btn-primary" %>
-    			</div>
- 			</div>
+			<% end %>
+		</tr>
+		<% @dcrs.each do |d| %>
+			<% if Date.today.strftime("%m-%d-%Y").to_s == d.date %>
+				<% color = "" %>
+			<%else %>
+				<% color = "#c8c8c8" %>
+			<% end %>
+			<tr style="background-color: <%= color %>">
+				<td><%= d.date %></td>
+				<td><%= d.dcnumber %></td>
+				<td><%= d.cumrecqty %></td>
+				<td><%= d.recqty %></td>
+				<td><%= d.cumconqty %></td>
+				<td><%= d.cons %></td>
+				<td><%= d.balatsite %></td>
+				<td><%= d.remarks %></td>
+				<% if current_user.has_role? :admin %>
+					<td>
+						<% u = User.find_by_id(d.user_id) %>
+						<%= u.fname unless u.blank?%>
+					</td>
+				<% end %>
+				<% if !current_user.has_role? :normaluser %>
+				<td>
+					<% if current_user.has_role? :admin %>
+						<a id="edit"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal<%= d.id %>">Edit</button></a>
+						<div class="modal fade" id="myModal<%= d.id %>">
+						    <div class="modal-dialog">
+						      <div class="modal-content">
+						      
+						        <!-- Modal Header -->
+						        <div class="modal-header text-center">
+						          <h4 class="modal-title">
+						          	<% @d = Dcr.find_by_id(d.id) %>
+						          	<%=@d.date %>	
+						          	</h4>
+						          <button type="button" class="close" data-dismiss="modal">&times;</button>
+						        </div>
+						        
+						        <!-- Modal body -->
+						        <div class="modal-body">
+							        <%= simple_form_for @d, :url =>{:action => 'dcrupdate', :method =>'patch'} do |f|%>
+							        	<%= f.hidden_field :itemlist_id, :value => params[:id] %>
+							        	<%= f.hidden_field :id, :value => d.id%>
+							        	<%= f.input :dcnumber, :label => "DC Number" %>
+										<%= f.input :recqty, :label => "Received qty"%>
+										<%= f.input :cons, :label => "Consumption qty"%>
+										<%= f.input :remarks, :label => "Remarks"%>
+										<div class="form-row text-center">
+							    			<div class="col-12">
+							        			<%= f.submit "Update", :class => "btn btn-primary" %>
+							    			</div>
+							 			</div>
+									<% end %>
+						        </div>
+						        
+						        <!-- Modal footer -->
+						        <!-- <div class="modal-footer">
+						          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+						        </div> -->
+						      </div>
+						    </div>
+						</div>
+					<% else %>
+						<% if Date.today.strftime("%m-%d-%Y").to_s == d.date %>
+							<a id="edit"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal<%= d.id %>">Edit</button></a>
+							<div class="modal fade" id="myModal<%= d.id %>">
+							    <div class="modal-dialog">
+							      <div class="modal-content">
+							      
+							        <!-- Modal Header -->
+							        <div class="modal-header text-center">
+							          <h4 class="modal-title">
+							          	<% @d = Dcr.find_by_id(d.id) %>
+							          	<%=@d.date %>	
+							          	</h4>
+							          <button type="button" class="close" data-dismiss="modal">&times;</button>
+							        </div>
+							        
+							        <!-- Modal body -->
+							        <div class="modal-body">
+								        <%= simple_form_for @d, :url =>{:action => 'dcrupdate', :method =>'patch'} do |f|%>
+								        	<%= f.hidden_field :itemlist_id, :value => params[:id] %>
+								        	<%= f.hidden_field :id, :value => d.id%>
+								        	<%= f.input :dcnumber, :label => "DC Number" %>
+											<%= f.input :recqty, :label => "Received qty"%>
+											<%= f.input :cons, :label => "Consumption qty"%>
+											<%= f.input :remarks, :label => "Remarks"%>
+											<div class="form-row text-center">
+								    			<div class="col-12">
+								        			<%= f.submit "Update", :class => "btn btn-primary" %>
+								    			</div>
+								 			</div>
+										<% end %>
+							        </div>
+							        
+							        <!-- Modal footer -->
+							        <!-- <div class="modal-footer">
+							          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+							        </div> -->
+							      </div>
+							    </div>
+							</div>
+						<% end %>
+					<% end %>
+				</td>
+				<% end %>
+			</tr>
+			
 		<% end %>
-        </div>
-        
-        <!-- Modal footer -->
-        <!-- <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        </div> -->
-        
-      </div>
-    </div>
-  </div>
+	</table>
+</div>

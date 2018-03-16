@@ -94,27 +94,27 @@
 							<div class="3">
 					  			<%= d.input :month, :label =>"Month", collection: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], :prompt => "Select Month" %>
 					  		</div>
-					  		<div class="3">
+					  		<div class="col-sm-3">
 					  			<%= d.input :year, :label =>"Year", input_html: {value: d.object.year || Date.today.strftime("%Y")} %>
 					  		</div>
-					  		<div class="3">
+					  		<div class="col-sm-3">
 					  			<%= d.input :date, :label =>"date", :placeholder => "Date" %>
 					  		</div>
-					  		<div class="3">
+					  		<div class="col-sm-3">
 					  			<%= d.input :cumrecqty, :label =>"Cum Rec qty", :placeholder => "Cum Rec Qty" %>
 					  		</div>
 					  	</div>
 					  	<div class="row" style="margin:2% 0 0 2%">
-					  		<div class="3">
+					  		<div class="col-sm-3">
 					  			<%= d.input :recqty, :label =>"Rec Qty", :placeholder =>"Rec Qty" %>
 					  		</div>
-					  		<div class="3">
+					  		<div class="col-sm-3">
 					  			<%= d.input :cumconqty, :label =>"Cum Con qty",:placeholder => "Cum Cons Qty" %>
 					  		</div>
-					  		<div class="3">
+					  		<div class="col-sm-3">
 					  			<%= d.input :cons, :label =>"Con qty", :placeholder =>"Cons" %>
 					  		</div>
-					  		<div class="3">
+					  		<div class="col-sm-3">
 					  			<%= d.input :balatsite, :label =>"Bal at site", :placeholder =>"Bal At Site" %>
 					  		</div>
 					  		

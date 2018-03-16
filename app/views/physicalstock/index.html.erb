@@ -1,103 +1,119 @@
-<% if notice %>
-	<div class="alert alert-success alert-dismissible" role="alert">
-  	 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <%= notice %>
-  </div>
-<% end %>
-<% if alert %>
-  <div class="alert alert-danger alert-dismissible" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <%= alert %>
-  </div>
-<% end %>
-<div class="row">
-	<div class="col-sm-4">
-		<% if current_user.has_role? :admin %>
-			<a href="/addstockworkorder"><button class="btn btn-primary">Add Stock WorkOrder</button></a>
-		<% end %>
-	</div>
-	<div class="col-sm-8">
-		<form class="form-inline right" action="/stockworkorders">
-    		<input class="form-control col-md-6 form-control-lg" id="inputsm"  name="locno" type="text" placeholder="Enter LOC Number">&nbsp;
-    		<button class="btn btn-success" type="submit">Search</button>
-  		</form>
-  	</div>
-</div>
-
-<% if @stockworkorder %>
-<br>
-<div class="row">
-	<div class="col-md-4"></div>
-	<div class="col-md-4">
-		<table class="table table-bordered" width="200px">
-			<tr>
-				<td><h4 class="text-primary text-center">Showing Results: <span class="text-danger"><%= @stockworkorder.locno %></span></h4></td>
-				<td>
-					<% if current_user.has_role? :admin %>
-						<a href="/stockworkorder/<%=@stockworkorder.id %>/change"><button class="btn btn-primary">Edit</button>
-					<% end %>
-				</td>
-			</tr>
-			<tr>
-				<td>ERP Number</td>
-				<td><%=@stockworkorder.erpno %></td>
-			</tr>
-			<tr>
-				<td>Project Name</td>
-				<td><%=@stockworkorder.projectname %></td>
-			</tr>
-			<tr>
-				<td>project Value</td>
-				<td><%=@stockworkorder.projectvalue %></td>
-			</tr>
-		    <tr>
-				<td>Brach</td>		
-				<td><%=@stockworkorder.branch %></td>
-			</tr>
-			<tr><td>Gm Name</td>
-				<td><%=@stockworkorder.gmname %></td>
-			</tr>
-			<tr>
-				<td>Project Incharge</td>
-				<td><%=@stockworkorder.projectincharge %></td>
-			</tr>
-			<tr>
-				<td>Billing Engineer</td>
-				<td><%=@stockworkorder.billingeng %></td>
-			</tr>
-			<tr>
-				<td colspan="2" class="text-center"><button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Show Data</button></td>
-			</tr>
-		</table>
-	</div>
-	<div class="col-md-4"></div>
-</div>
-<div>
-	<div class="collapse" id="collapseExample">
-			<table class="table table-bordered">
-				<tr><th>Item Number</th><th>Item Name</th><th>Units</th><th>Matrial Qty</th></tr>
-				<% @stockworkorder.itemlists.each do |i| %>
-					<tr>
-						<td><a href="/dcrs/<%= i.id %>"><%= i.itemno %></a></td>
-						<td><%= i.itemname %></td>
-						<td><%= i.units %></td>
-						<td><%= i.matqty %></td>
-					</tr>
-				<% end %>
-			</table>
-	</div>
-</div>
-<br>
-<% @stockworkorder.itemlists.each do |i| %>
-	<% @d = Dcr.where(:date => Date.today.strftime("%m-%d-%y").to_s, :itemlist_id => i.id).last %>
-	<% if @d %>
-		<%= @d.recqty %>
+<div class="container-fluid">
+	<% if notice %>
+		<div class="alert alert-success alert-dismissible" role="alert">
+	  	 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	    <%= notice %>
+	  </div>
 	<% end %>
-<% end %>
+	<% if alert %>
+	  <div class="alert alert-danger alert-dismissible" role="alert">
+	    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	    <%= alert %>
+	  </div>
+	<% end %>
 
-<% else %>
-<div class="text-center"><br><br><br>
-	<h3>No matches found</h3>
+	<div class="row">
+		<div class="col-sm-3">
+			<% if current_user.has_role? :admin %>
+				<a href="/addstockworkorder"><button class="btn btn-primary">Add Stock WorkOrder</button></a>
+			<% end %>
+		</div>
+		<div class="col-sm-9">
+			<form class="form-inline right" action="/stockworkorders">
+	    		<input class="form-control col-md-7 form-control-lg" id="inputsm"  name="locno" type="text" placeholder="Enter LOC Number">&nbsp;
+	    		<button class="btn btn-success" type="submit">Search</button>
+	  		</form>
+	  	</div>
+	</div>
+	<% if @stockworkorder %>
+		<br><br>
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<table class="table table-bordered" width="200px">
+					<tr>
+						<td><h4 class="text-primary text-center">Showing Results: <span class="text-danger"><%= @stockworkorder.locno %></span></h4>
+						</td>
+						<td>
+							<% if current_user.has_role? :admin %>
+								<a href="/stockworkorder/<%=@stockworkorder.id %>/change"><button class="btn btn-primary">Edit</button>
+							<% end %>
+						</td>
+					</tr>
+					<tr>
+						<td>ERP Number</td>
+						<td><%=@stockworkorder.erpno %></td>
+					</tr>
+					<tr>
+						<td>Project Name</td>
+						<td><%=@stockworkorder.projectname %></td>
+					</tr>
+					<tr>
+						<td>project Value</td>
+						<td><%=@stockworkorder.projectvalue %></td>
+					</tr>
+				    <tr>
+						<td>Brach</td>		
+						<td><%=@stockworkorder.branch %></td>
+					</tr>
+					<tr><td>Gm Name</td>
+						<td><%=@stockworkorder.gmname %></td>
+					</tr>
+					<tr>
+						<td>Project Incharge</td>
+						<td><%=@stockworkorder.projectincharge %></td>
+					</tr>
+					<tr>
+						<td>Billing Engineer</td>
+						<td><%=@stockworkorder.billingeng %></td>
+					</tr>
+					<tr>
+						<td colspan="2" class="text-center"><button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Show Data</button></td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+		<div class="collapse" id="collapseExample">
+			<table class="table table-bordered">
+				<tr><th>Item Number</th><th>Item Name</th><th>Units</th><th>Matrial Qty</th><th>Today Rec qty</th><th>Today consumption qty</th></tr>
+					<% @stockworkorder.itemlists.each do |i| %>
+				<tr>
+					<td><a href="/dcrs/<%= i.id %>"><%= i.itemno %></a></td>
+					<td><%= i.itemname %></td>
+					<td><%= i.units %></td>
+					<td><%= i.matqty %></td>
+					<% @d = Dcr.where(:date => Date.today.strftime("%m-%d-%Y").to_s, :itemlist_id => i.id).last %>
+					<% if @d %>
+						<td>
+							<%= @d.recqty %>
+						</td>
+						<td>
+							<%= @d.cumconqty %>
+						</td>
+					<% else %>
+						<td>
+							<%= @d.recqty %>
+						</td>
+						<td>
+							<%= @d.cumconqty %>
+						</td>
+					<% end %>
+					
+					<td>
+
+					</td>
+				</tr>
+					<% end %>
+			</table>
+		</div>
+		</div>
+		
+		<br>
+	<% else %>
+		<div class="text-center"><br><br><br>
+			<h3>No matches found</h3>
+		</div>
+	<% end %>
+	<br><br>
 </div>
-<% end %>
-

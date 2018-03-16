@@ -56,27 +56,27 @@
 		<div style="margin:0% 3% 0% 3%">
 			<div class="card card-block">
 				<div class="row" style="margin-left:2%">
-					<div class="3">
+					<div class="col-sm-3">
 				  		<%= t.input :itemno, :label =>false, :placeholder => "Item Number" %>
 				  	</div>
-				  	<div class="3">
+				  	<div class="col-sm-3">
 				  		<%= t.input :itemname, :label =>false, :placeholder => "Item Name" %>
 				  	</div>
-				  	<div class="3">
+				  	<div class="col-sm-3">
 				  		<%= t.input :units, :label =>false, collection: [ "Sqm", "Rmt", "Kgs","Nos","Grams","Lts","Packs","Cum","Brass"], :prompt => "Select type" %>
 				  	</div>
-				  	<div class="3">
+				  	<div class="col-sm-3">
 				  		<%= t.input :matqty, :label =>false, :placeholder => "Matrial Quantity" %>
 				  	</div>
 				</div>
 				<div class="row" style="margin-left:2%">
-					<div class="3">
+					<div class="col-sm-3">
 				  		<%= t.input :cumrecqtystart, :label =>false, :placeholder => "Cumulative received qty start total" %>
 				  	</div>
-				  	<div class="3">
+				  	<div class="col-sm-3">
 				  		<%= t.input :cumconqtystart, :label =>false, :placeholder => "Cumulative consumption qty start total" %>
 				  	</div>
-				  	<div class="3">
+				  	<div class="col-sm-3">
 				  		<%= t.input :balatsitestart, :label =>false, :placeholder => "Balance at site start total" %>
 				  	</div>
 				  	<div class="col-sm-3">

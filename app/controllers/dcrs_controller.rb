@@ -1,5 +1,7 @@
 class DcrsController < ApplicationController
+  before_action :authenticate_user!
   require 'date'
+  require 'active_support/core_ext/integer/inflections'
   def index
     if params[:id]
         @itemlist = Itemlist.find_by_id(params[:id])
@@ -43,35 +45,45 @@ class DcrsController < ApplicationController
   def dcrupdate
     @itemlist = Itemlist.find_by_id(dcr_params["itemlist_id"])
     @dcr = Dcr.find_by_id(dcr_params[:id])
-    puts @dcr.recqty.class
+    puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$"
+    a = @dcr.date.split("-")
+    puts a
+    @tdate = Date.parse "#{a[2]}-#{a[0]}-#{a[1]}" 
+    puts @tdate
+    puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$"
+    # puts k
+    puts dcr_params.inspect
     if dcr_params[:recqty].to_f == @dcr.recqty
-      cumrecqtytotal = @dcr.cumrecqty
+      @cumrecqtytotal = @dcr.cumrecqty
     else
-        cumrecqtytotal = (@dcr.cumrecqty - @dcr.recqty) + dcr_params[:recqty].to_f
+        @cumrecqtytotal = (@dcr.cumrecqty - @dcr.recqty) + dcr_params[:recqty].to_f
     end
 
     if dcr_params[:cons].to_f == @dcr.cons
-      cumconqtytotal = @dcr.cumconqty
+      @cumconqtytotal = @dcr.cumconqty
     else
-        cumconqtytotal = (@dcr.cumconqty - @dcr.cons) + dcr_params[:cons].to_f
+        @cumconqtytotal = (@dcr.cumconqty - @dcr.cons) + dcr_params[:cons].to_f
     end
 
     if (dcr_params[:cons].to_f == @dcr.cons && dcr_params[:recqty].to_f == @dcr.recqty)
-      balatsitetotal = @dcr.balatsite
+      @balatsitetotal = @dcr.balatsite
     else
-      balatsitetotal = cumrecqtytotal - cumconqtytotal
+      @balatsitetotal = @cumrecqtytotal - @cumconqtytotal
     end
     
-    if @dcr.update_attributes(:cumrecqty => cumrecqtytotal,:cumconqty => cumconqtytotal,:balatsite => balatsitetotal,
-      :recqty => dcr_params[:recqty],:cons => dcr_params["cons"],
+    if @dcr.update_attributes(:user_id => current_user.id, :cumrecqty => @cumrecqtytotal,:cumconqty => @cumconqtytotal,:balatsite => @balatsitetotal, :recqty => dcr_params[:recqty],:cons => dcr_params["cons"],
       :dcnumber => dcr_params[:dcnumber], :remarks => dcr_params[:remarks])
 
-      (Date.today..Date.today.end_of_month).each do |d|
+      (@tdate+1..Date.today.end_of_month).each do |d|
+        
         puts d.strftime("%m-%d-%Y")
         dc = Dcr.where(:date =>d.strftime("%m-%d-%Y"),:itemlist_id => dcr_params["itemlist_id"]).last
-        dc.update_attributes(:cumrecqtytotal => cumrecqtytotal, :cumconqtytotal => cumconqtytotal,
-         :balatsitetotal=>balatsitetotal,
-         :cumrecqty => cumrecqtytotal,:cumconqty => cumconqtytotal,:balatsite=>balatsitetotal)
+        @cumrecqtytotal = @cumrecqtytotal+dc.recqty
+        @cumconqtytotal = @cumconqtytotal+dc.cons
+        @balatsitetotal = @cumrecqtytotal-@cumconqtytotal
+        dc.update_attributes(:cumrecqtytotal => @cumrecqtytotal, :cumconqtytotal => @cumconqtytotal,
+         :balatsitetotal=>@balatsitetotal,
+         :cumrecqty => @cumrecqtytotal,:cumconqty => @cumconqtytotal,:balatsite=>@balatsitetotal)
       end
     
       redirect_back fallback_location: root_path, :notice => "updated"

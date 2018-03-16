@@ -4,7 +4,13 @@ class RegistrationsController < Devise::RegistrationsController
 		puts signup_params["secure_password"]
 		if signup_params["secure_password"] == "A12345@m"
 			if @user.valid?
-				@user.add_role :admin
+				if signup_params["role"] == "Admin1"
+					@user.add_role :admin
+				elsif signup_params["role"] == "User1"
+					@user.add_role :user
+				else
+					@user.add_role :normaluser
+				end
 	    		@user.save!
 	      		flash[:notice] = "Success"
 	      		redirect_to root_url, :notice => "Account created successfully."
@@ -20,7 +26,6 @@ class RegistrationsController < Devise::RegistrationsController
 
 	private
 	def signup_params
-		params.require(:user).permit(:fname, :lname, :email, :password, :password_confirmation, :employee_code, :mobile, :secure_password)
+		params.require(:user).permit(:fname, :lname, :email, :password, :password_confirmation, :employee_code, :mobile, :secure_password, :role)
 	end
-
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180314212734) do
+ActiveRecord::Schema.define(version: 20180315202248) do
 
   create_table "dcrs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "itemlist_id"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20180314212734) do
     t.decimal "cumconqtytotal", precision: 20, scale: 10
     t.decimal "balatsitetotal", precision: 20, scale: 10
     t.string "dcnumber"
+    t.integer "user_id"
     t.index ["itemlist_id"], name: "index_dcrs_on_itemlist_id"
     t.index ["stockworkorder_id"], name: "index_dcrs_on_stockworkorder_id"
   end
@@ -94,6 +95,7 @@ ActiveRecord::Schema.define(version: 20180314212734) do
     t.string "mobile"
     t.string "employee_code"
     t.string "secure_password"
+    t.string "role"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
