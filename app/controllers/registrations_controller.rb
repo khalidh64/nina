@@ -4,9 +4,9 @@ class RegistrationsController < Devise::RegistrationsController
 		puts signup_params["secure_password"]
 		if signup_params["secure_password"] == "A12345@m"
 			if @user.valid?
-				if signup_params["role"] == "Admin1"
+				if signup_params["role"] == "Admin"
 					@user.add_role :admin
-				elsif signup_params["role"] == "User1"
+				elsif signup_params["role"] == "Partial Admin"
 					@user.add_role :user
 				else
 					@user.add_role :normaluser
