@@ -75,6 +75,7 @@
 			<div class="col-md-3"></div>
 		</div>
 		<div class="collapse" id="collapseExample">
+			
 			<table class="table table-bordered">
 				<tr><th>Item Number</th><th>Item Name</th><th>Units</th><th>Matrial Qty</th><th>Today Rec qty</th><th>Today consumption qty</th></tr>
 					<% @stockworkorder.itemlists.each do |i| %>
@@ -89,7 +90,7 @@
 							<%= @d.recqty %>
 						</td>
 						<td>
-							<%= @d.cumconqty %>
+							<%= @d.cons %>
 						</td>
 					<% else %>
 						<td>
@@ -100,9 +101,7 @@
 						</td>
 					<% end %>
 					
-					<td>
-
-					</td>
+					
 				</tr>
 					<% end %>
 			</table>

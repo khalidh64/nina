@@ -81,7 +81,13 @@
 <% end %>
 <script>
   $( function() {
-    $( "#datepicker" ).datepicker();
-    $( "#datepicker2" ).datepicker();
+    $( "#datepicker" ).datepicker({
+    	changeMonth: true,
+      	changeYear: true
+    });
+    $( "#datepicker2" ).datepicker({
+    	changeMonth: true,
+      	changeYear: true
+    });
   } );
-  </script>
+ </script>
