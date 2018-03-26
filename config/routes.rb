@@ -27,6 +27,11 @@ Rails.application.routes.draw do
   get '/dcr/today/change' => 'dcrs#today_change'
   patch 'dcrupdate' => 'dcrs#dcrupdate'
 
+  ################# Dcrs ######################
+  get '/daily_rec_cum_mails' => 'dailymail#dailyrec_cum'
+  get '/dailyrecmail' => 'dailymail#dailyrec'
+  get '/dailycummail' => 'dailymail#dailycum'
+
 
 
 

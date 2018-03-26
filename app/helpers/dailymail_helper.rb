@@ -1,0 +1,2 @@
+module DailymailHelper
+end
