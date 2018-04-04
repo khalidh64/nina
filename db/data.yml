@@ -1,0 +1,2274 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - 2018-03-15 19:34:40.000000000 Z
+    - 2018-03-15 19:34:40.000000000 Z
+
+---
+dcrs:
+  columns:
+  - id
+  - itemlist_id
+  - stockworkorder_id
+  - date
+  - cumrecqty
+  - recqty
+  - cumconqty
+  - cons
+  - balatsite
+  - month
+  - year
+  - premonthbal
+  - presentbal
+  - remarks
+  - created_at
+  - updated_at
+  - cumrecqtytotal
+  - cumconqtytotal
+  - balatsitetotal
+  - dcnumber
+  - user_id
+  records: 
+  - - 1
+    - 1
+    - 1
+    - 03-01-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:05.000000000 Z
+    - 2018-03-15 19:37:05.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 2
+    - 1
+    - 1
+    - 03-02-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:05.000000000 Z
+    - 2018-03-15 19:37:05.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 3
+    - 1
+    - 1
+    - 03-03-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:06.000000000 Z
+    - 2018-03-15 19:37:06.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 4
+    - 1
+    - 1
+    - 03-04-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:06.000000000 Z
+    - 2018-03-15 19:37:06.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 5
+    - 1
+    - 1
+    - 03-05-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:06.000000000 Z
+    - 2018-03-15 19:37:06.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 6
+    - 1
+    - 1
+    - 03-06-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:06.000000000 Z
+    - 2018-03-15 19:37:06.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 7
+    - 1
+    - 1
+    - 03-07-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:06.000000000 Z
+    - 2018-03-15 19:37:06.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 8
+    - 1
+    - 1
+    - 03-08-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:06.000000000 Z
+    - 2018-03-15 19:37:06.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 9
+    - 1
+    - 1
+    - 03-09-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:06.000000000 Z
+    - 2018-03-15 19:37:06.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 10
+    - 1
+    - 1
+    - 03-10-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:06.000000000 Z
+    - 2018-03-15 19:37:06.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 11
+    - 1
+    - 1
+    - 03-11-2018
+    - !ruby/object:BigDecimal 27:0.1201e4
+    - !ruby/object:BigDecimal 27:0.1e1
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.1e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:06.000000000 Z
+    - 2018-03-15 20:03:24.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1201e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.1e1
+    - ''
+    - 
+  - - 12
+    - 1
+    - 1
+    - 03-12-2018
+    - !ruby/object:BigDecimal 27:0.1201e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.1e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:06.000000000 Z
+    - 2018-03-15 20:03:24.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1201e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.1e1
+    - 
+    - 
+  - - 13
+    - 1
+    - 1
+    - 03-13-2018
+    - !ruby/object:BigDecimal 27:0.1201e4
+    - !ruby/object:BigDecimal 27:0.1e1
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.1e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:06.000000000 Z
+    - 2018-03-15 20:03:24.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1201e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.1e1
+    - ''
+    - 
+  - - 14
+    - 1
+    - 1
+    - 03-14-2018
+    - !ruby/object:BigDecimal 27:0.1201e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.1e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:06.000000000 Z
+    - 2018-03-15 20:03:24.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1201e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.1e1
+    - 
+    - 
+  - - 15
+    - 1
+    - 1
+    - 03-15-2018
+    - !ruby/object:BigDecimal 27:0.1201e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.1e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:06.000000000 Z
+    - 2018-03-15 20:03:24.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1201e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.1e1
+    - 
+    - 
+  - - 16
+    - 1
+    - 1
+    - 03-16-2018
+    - !ruby/object:BigDecimal 27:0.1204e4
+    - !ruby/object:BigDecimal 27:0.8e1
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.4e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:06.000000000 Z
+    - 2018-03-15 20:25:37.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1203e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.3e1
+    - ''
+    - 1
+  - - 17
+    - 1
+    - 1
+    - 03-17-2018
+    - !ruby/object:BigDecimal 27:0.1204e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.4e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:07.000000000 Z
+    - 2018-03-15 20:25:54.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1207e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.7e1
+    - ''
+    - 1
+  - - 18
+    - 1
+    - 1
+    - 03-18-2018
+    - !ruby/object:BigDecimal 27:0.1204e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.4e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:07.000000000 Z
+    - 2018-03-15 20:25:54.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1204e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.4e1
+    - 
+    - 
+  - - 19
+    - 1
+    - 1
+    - 03-19-2018
+    - !ruby/object:BigDecimal 27:0.1204e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.4e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:07.000000000 Z
+    - 2018-03-15 20:25:54.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1204e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.4e1
+    - 
+    - 
+  - - 20
+    - 1
+    - 1
+    - 03-20-2018
+    - !ruby/object:BigDecimal 27:0.1204e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.4e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:07.000000000 Z
+    - 2018-03-15 20:25:54.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1204e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.4e1
+    - 
+    - 
+  - - 21
+    - 1
+    - 1
+    - 03-21-2018
+    - !ruby/object:BigDecimal 27:0.1205e4
+    - !ruby/object:BigDecimal 27:0.1e1
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.5e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:07.000000000 Z
+    - 2018-03-15 20:26:55.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1205e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.5e1
+    - ''
+    - 1
+  - - 22
+    - 1
+    - 1
+    - 03-22-2018
+    - !ruby/object:BigDecimal 27:0.1205e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.5e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:07.000000000 Z
+    - 2018-03-15 20:26:55.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1205e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.5e1
+    - 
+    - 
+  - - 23
+    - 1
+    - 1
+    - 03-23-2018
+    - !ruby/object:BigDecimal 27:0.1206e4
+    - !ruby/object:BigDecimal 27:0.1e1
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.6e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:07.000000000 Z
+    - 2018-03-15 20:26:55.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1206e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.6e1
+    - ''
+    - 
+  - - 24
+    - 1
+    - 1
+    - 03-24-2018
+    - !ruby/object:BigDecimal 27:0.1206e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.6e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:07.000000000 Z
+    - 2018-03-15 20:26:55.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1206e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.6e1
+    - 
+    - 
+  - - 25
+    - 1
+    - 1
+    - 03-25-2018
+    - !ruby/object:BigDecimal 27:0.1207e4
+    - !ruby/object:BigDecimal 27:0.1e1
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.7e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:07.000000000 Z
+    - 2018-03-15 20:26:55.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1207e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.7e1
+    - ''
+    - 
+  - - 26
+    - 1
+    - 1
+    - 03-26-2018
+    - !ruby/object:BigDecimal 27:0.122e4
+    - !ruby/object:BigDecimal 27:0.13e2
+    - !ruby/object:BigDecimal 27:0.1214e4
+    - !ruby/object:BigDecimal 27:0.14e2
+    - !ruby/object:BigDecimal 27:0.6e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:07.000000000 Z
+    - 2018-03-26 09:42:14.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1207e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.7e1
+    - smk
+    - 1
+  - - 27
+    - 1
+    - 1
+    - 03-27-2018
+    - !ruby/object:BigDecimal 27:0.122e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.1214e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.6e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:07.000000000 Z
+    - 2018-03-26 09:42:15.000000000 Z
+    - !ruby/object:BigDecimal 27:0.122e4
+    - !ruby/object:BigDecimal 27:0.1214e4
+    - !ruby/object:BigDecimal 27:0.6e1
+    - 
+    - 
+  - - 28
+    - 1
+    - 1
+    - 03-28-2018
+    - !ruby/object:BigDecimal 27:0.122e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.1214e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.6e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:07.000000000 Z
+    - 2018-03-26 09:42:15.000000000 Z
+    - !ruby/object:BigDecimal 27:0.122e4
+    - !ruby/object:BigDecimal 27:0.1214e4
+    - !ruby/object:BigDecimal 27:0.6e1
+    - 
+    - 
+  - - 29
+    - 1
+    - 1
+    - 03-29-2018
+    - !ruby/object:BigDecimal 27:0.122e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.1214e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.6e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:07.000000000 Z
+    - 2018-03-26 09:42:15.000000000 Z
+    - !ruby/object:BigDecimal 27:0.122e4
+    - !ruby/object:BigDecimal 27:0.1214e4
+    - !ruby/object:BigDecimal 27:0.6e1
+    - 
+    - 
+  - - 30
+    - 1
+    - 1
+    - 03-30-2018
+    - !ruby/object:BigDecimal 27:0.122e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.1214e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.6e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:07.000000000 Z
+    - 2018-03-26 09:42:15.000000000 Z
+    - !ruby/object:BigDecimal 27:0.122e4
+    - !ruby/object:BigDecimal 27:0.1214e4
+    - !ruby/object:BigDecimal 27:0.6e1
+    - 
+    - 
+  - - 31
+    - 1
+    - 1
+    - 03-31-2018
+    - !ruby/object:BigDecimal 27:0.1223e4
+    - !ruby/object:BigDecimal 27:0.3e1
+    - !ruby/object:BigDecimal 27:0.1214e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.9e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-15 19:37:07.000000000 Z
+    - 2018-03-26 09:42:15.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1223e4
+    - !ruby/object:BigDecimal 27:0.1214e4
+    - !ruby/object:BigDecimal 27:0.9e1
+    - ''
+    - 
+  - - 32
+    - 2
+    - 1
+    - 03-01-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:57.000000000 Z
+    - 2018-03-16 09:21:57.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 33
+    - 2
+    - 1
+    - 03-02-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:57.000000000 Z
+    - 2018-03-16 09:21:57.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 34
+    - 2
+    - 1
+    - 03-03-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:57.000000000 Z
+    - 2018-03-16 09:21:57.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 35
+    - 2
+    - 1
+    - 03-04-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:58.000000000 Z
+    - 2018-03-16 09:21:58.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 36
+    - 2
+    - 1
+    - 03-05-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:58.000000000 Z
+    - 2018-03-16 09:21:58.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 37
+    - 2
+    - 1
+    - 03-06-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:58.000000000 Z
+    - 2018-03-16 09:21:58.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 38
+    - 2
+    - 1
+    - 03-07-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:58.000000000 Z
+    - 2018-03-16 09:21:58.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 39
+    - 2
+    - 1
+    - 03-08-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:58.000000000 Z
+    - 2018-03-16 09:21:58.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 40
+    - 2
+    - 1
+    - 03-09-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:58.000000000 Z
+    - 2018-03-16 09:21:58.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 41
+    - 2
+    - 1
+    - 03-10-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:58.000000000 Z
+    - 2018-03-16 09:21:58.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 42
+    - 2
+    - 1
+    - 03-11-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:58.000000000 Z
+    - 2018-03-16 09:21:58.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 43
+    - 2
+    - 1
+    - 03-12-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:58.000000000 Z
+    - 2018-03-16 09:21:58.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 44
+    - 2
+    - 1
+    - 03-13-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:58.000000000 Z
+    - 2018-03-16 09:21:58.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 45
+    - 2
+    - 1
+    - 03-14-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:58.000000000 Z
+    - 2018-03-16 09:21:58.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 46
+    - 2
+    - 1
+    - 03-15-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:58.000000000 Z
+    - 2018-03-16 09:21:58.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 47
+    - 2
+    - 1
+    - 03-16-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:58.000000000 Z
+    - 2018-03-16 09:21:58.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 48
+    - 2
+    - 1
+    - 03-17-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:58.000000000 Z
+    - 2018-03-16 09:21:58.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 49
+    - 2
+    - 1
+    - 03-18-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:59.000000000 Z
+    - 2018-03-16 09:21:59.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 50
+    - 2
+    - 1
+    - 03-19-2018
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:59.000000000 Z
+    - 2018-03-16 09:21:59.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - 
+    - 
+  - - 51
+    - 2
+    - 1
+    - 03-20-2018
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 27:0.12e2
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.112e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:59.000000000 Z
+    - 2018-03-19 20:15:01.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 1
+  - - 52
+    - 2
+    - 1
+    - 03-21-2018
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.112e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:59.000000000 Z
+    - 2018-03-19 20:15:02.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 27:0.112e3
+    - 
+    - 
+  - - 53
+    - 2
+    - 1
+    - 03-22-2018
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.112e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:59.000000000 Z
+    - 2018-03-19 20:15:02.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 27:0.112e3
+    - 
+    - 
+  - - 54
+    - 2
+    - 1
+    - 03-23-2018
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.112e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:59.000000000 Z
+    - 2018-03-19 20:15:02.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 27:0.112e3
+    - 
+    - 
+  - - 55
+    - 2
+    - 1
+    - 03-24-2018
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.112e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:59.000000000 Z
+    - 2018-03-19 20:15:02.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 27:0.112e3
+    - 
+    - 
+  - - 56
+    - 2
+    - 1
+    - 03-25-2018
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.112e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:59.000000000 Z
+    - 2018-03-19 20:15:02.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 27:0.112e3
+    - 
+    - 
+  - - 57
+    - 2
+    - 1
+    - 03-26-2018
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.112e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:59.000000000 Z
+    - 2018-03-19 20:15:02.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 27:0.112e3
+    - 
+    - 
+  - - 58
+    - 2
+    - 1
+    - 03-27-2018
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.112e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:59.000000000 Z
+    - 2018-03-19 20:15:02.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 27:0.112e3
+    - 
+    - 
+  - - 59
+    - 2
+    - 1
+    - 03-28-2018
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.112e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:59.000000000 Z
+    - 2018-03-19 20:15:02.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 27:0.112e3
+    - 
+    - 
+  - - 60
+    - 2
+    - 1
+    - 03-29-2018
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.112e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:59.000000000 Z
+    - 2018-03-19 20:15:02.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 27:0.112e3
+    - 
+    - 
+  - - 61
+    - 2
+    - 1
+    - 03-30-2018
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.112e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:59.000000000 Z
+    - 2018-03-19 20:15:02.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 27:0.112e3
+    - 
+    - 
+  - - 62
+    - 2
+    - 1
+    - 03-31-2018
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.112e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-16 09:21:59.000000000 Z
+    - 2018-03-19 20:15:02.000000000 Z
+    - !ruby/object:BigDecimal 27:0.1212e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 27:0.112e3
+    - 
+    - 
+  - - 63
+    - 3
+    - 2
+    - 03-01-2018
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:41.000000000 Z
+    - 2018-03-18 17:50:41.000000000 Z
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - 
+    - 
+  - - 64
+    - 3
+    - 2
+    - 03-02-2018
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:41.000000000 Z
+    - 2018-03-18 17:50:41.000000000 Z
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - 
+    - 
+  - - 65
+    - 3
+    - 2
+    - 03-03-2018
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:41.000000000 Z
+    - 2018-03-18 17:50:41.000000000 Z
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - 
+    - 
+  - - 66
+    - 3
+    - 2
+    - 03-04-2018
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:41.000000000 Z
+    - 2018-03-18 17:50:41.000000000 Z
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - 
+    - 
+  - - 67
+    - 3
+    - 2
+    - 03-05-2018
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:41.000000000 Z
+    - 2018-03-18 17:50:41.000000000 Z
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - 
+    - 
+  - - 68
+    - 3
+    - 2
+    - 03-06-2018
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:41.000000000 Z
+    - 2018-03-18 17:50:41.000000000 Z
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - 
+    - 
+  - - 69
+    - 3
+    - 2
+    - 03-07-2018
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:42.000000000 Z
+    - 2018-03-18 17:50:42.000000000 Z
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - 
+    - 
+  - - 70
+    - 3
+    - 2
+    - 03-08-2018
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:42.000000000 Z
+    - 2018-03-18 17:50:42.000000000 Z
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - 
+    - 
+  - - 71
+    - 3
+    - 2
+    - 03-09-2018
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:42.000000000 Z
+    - 2018-03-18 17:50:42.000000000 Z
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - 
+    - 
+  - - 72
+    - 3
+    - 2
+    - 03-10-2018
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:42.000000000 Z
+    - 2018-03-18 17:50:42.000000000 Z
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - 
+    - 
+  - - 73
+    - 3
+    - 2
+    - 03-11-2018
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:42.000000000 Z
+    - 2018-03-18 17:50:42.000000000 Z
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - 
+    - 
+  - - 74
+    - 3
+    - 2
+    - 03-12-2018
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:42.000000000 Z
+    - 2018-03-18 17:50:42.000000000 Z
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - 
+    - 
+  - - 75
+    - 3
+    - 2
+    - 03-13-2018
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:42.000000000 Z
+    - 2018-03-18 17:50:42.000000000 Z
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - 
+    - 
+  - - 76
+    - 3
+    - 2
+    - 03-14-2018
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:42.000000000 Z
+    - 2018-03-18 17:50:42.000000000 Z
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - 
+    - 
+  - - 77
+    - 3
+    - 2
+    - 03-15-2018
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:42.000000000 Z
+    - 2018-03-18 17:50:42.000000000 Z
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - 
+    - 
+  - - 78
+    - 3
+    - 2
+    - 03-16-2018
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:42.000000000 Z
+    - 2018-03-18 17:50:42.000000000 Z
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - 
+    - 
+  - - 79
+    - 3
+    - 2
+    - 03-17-2018
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.121e3
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:42.000000000 Z
+    - 2018-03-18 17:50:42.000000000 Z
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - 
+    - 
+  - - 80
+    - 3
+    - 2
+    - 03-18-2018
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 27:0.12e2
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 27:0.1e2
+    - !ruby/object:BigDecimal 27:0.2e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:42.000000000 Z
+    - 2018-03-18 18:08:36.000000000 Z
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - ''
+    - 1
+  - - 81
+    - 3
+    - 2
+    - 03-19-2018
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.2e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:42.000000000 Z
+    - 2018-03-18 18:08:36.000000000 Z
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 27:0.2e1
+    - 
+    - 
+  - - 82
+    - 3
+    - 2
+    - 03-20-2018
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.2e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:42.000000000 Z
+    - 2018-03-18 18:08:36.000000000 Z
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 27:0.2e1
+    - 
+    - 
+  - - 83
+    - 3
+    - 2
+    - 03-21-2018
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.2e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:42.000000000 Z
+    - 2018-03-18 18:08:36.000000000 Z
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 27:0.2e1
+    - 
+    - 
+  - - 84
+    - 3
+    - 2
+    - 03-22-2018
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.2e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:43.000000000 Z
+    - 2018-03-18 18:08:36.000000000 Z
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 27:0.2e1
+    - 
+    - 
+  - - 85
+    - 3
+    - 2
+    - 03-23-2018
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.2e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:43.000000000 Z
+    - 2018-03-18 18:08:36.000000000 Z
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 27:0.2e1
+    - 
+    - 
+  - - 86
+    - 3
+    - 2
+    - 03-24-2018
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.2e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:43.000000000 Z
+    - 2018-03-18 18:08:36.000000000 Z
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 27:0.2e1
+    - 
+    - 
+  - - 87
+    - 3
+    - 2
+    - 03-25-2018
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.2e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:43.000000000 Z
+    - 2018-03-18 18:08:36.000000000 Z
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 27:0.2e1
+    - 
+    - 
+  - - 88
+    - 3
+    - 2
+    - 03-26-2018
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.2e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:43.000000000 Z
+    - 2018-03-18 18:08:36.000000000 Z
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 27:0.2e1
+    - 
+    - 
+  - - 89
+    - 3
+    - 2
+    - 03-27-2018
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.2e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:43.000000000 Z
+    - 2018-03-18 18:08:36.000000000 Z
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 27:0.2e1
+    - 
+    - 
+  - - 90
+    - 3
+    - 2
+    - 03-28-2018
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.2e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:43.000000000 Z
+    - 2018-03-18 18:08:36.000000000 Z
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 27:0.2e1
+    - 
+    - 
+  - - 91
+    - 3
+    - 2
+    - 03-29-2018
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.2e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:43.000000000 Z
+    - 2018-03-18 18:08:37.000000000 Z
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 27:0.2e1
+    - 
+    - 
+  - - 92
+    - 3
+    - 2
+    - 03-30-2018
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.2e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:43.000000000 Z
+    - 2018-03-18 18:08:37.000000000 Z
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 27:0.2e1
+    - 
+    - 
+  - - 93
+    - 3
+    - 2
+    - 03-31-2018
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 27:0.2e1
+    - March
+    - 2018
+    - !ruby/object:BigDecimal 18:0.0
+    - !ruby/object:BigDecimal 18:0.0
+    - ''
+    - 2018-03-18 17:50:43.000000000 Z
+    - 2018-03-18 18:08:37.000000000 Z
+    - !ruby/object:BigDecimal 27:0.133e3
+    - !ruby/object:BigDecimal 27:0.131e3
+    - !ruby/object:BigDecimal 27:0.2e1
+    - 
+    - 
+
+---
+itemlists:
+  columns:
+  - id
+  - stockworkorder_id
+  - itemno
+  - itemname
+  - units
+  - matqty
+  - created_at
+  - updated_at
+  - cumrecqtystart
+  - cumconqtystart
+  - balatsitestart
+  records: 
+  - - 1
+    - 1
+    - Smk
+    - smk
+    - Sqm
+    - !ruby/object:BigDecimal 27:0.12222e5
+    - 2018-03-15 19:37:05.000000000 Z
+    - 2018-03-15 19:37:05.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 18:0.0
+  - - 2
+    - 1
+    - smk2
+    - smk2
+    - Sqm
+    - !ruby/object:BigDecimal 27:0.13e4
+    - 2018-03-16 09:21:42.000000000 Z
+    - 2018-03-16 09:21:42.000000000 Z
+    - !ruby/object:BigDecimal 27:0.12e4
+    - !ruby/object:BigDecimal 27:0.11e4
+    - !ruby/object:BigDecimal 18:0.0
+  - - 3
+    - 2
+    - smk
+    - smk
+    - Sqm
+    - !ruby/object:BigDecimal 27:0.12e4
+    - 2018-03-18 17:50:41.000000000 Z
+    - 2018-03-18 17:50:41.000000000 Z
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+    - !ruby/object:BigDecimal 27:0.121e3
+
+---
+roles:
+  columns:
+  - id
+  - name
+  - resource_type
+  - resource_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - admin
+    - 
+    - 
+    - 2018-03-15 19:36:22.000000000 Z
+    - 2018-03-15 19:36:22.000000000 Z
+  - - 2
+    - user
+    - 
+    - 
+    - 2018-03-15 20:34:11.000000000 Z
+    - 2018-03-15 20:34:11.000000000 Z
+  - - 3
+    - normaluser
+    - 
+    - 
+    - 2018-03-16 09:03:22.000000000 Z
+    - 2018-03-16 09:03:22.000000000 Z
+
+---
+stockworkorders:
+  columns:
+  - id
+  - user_id
+  - locno
+  - erpno
+  - projectname
+  - projectvalue
+  - branch
+  - gmname
+  - projectincharge
+  - billingeng
+  - created_at
+  - updated_at
+  - state
+  records: 
+  - - 1
+    - 1
+    - smk
+    - smk
+    - smk
+    - smk
+    - VIJ- Vijayawada
+    - 970070-Ananta Das
+    - 970080-Mohd Irshad
+    - 970389- Jitendra Kawde
+    - 2018-03-15 19:37:05.000000000 Z
+    - 2018-03-15 19:37:05.000000000 Z
+    - TEL- Telangana
+  - - 2
+    - 1
+    - smktest
+    - smk
+    - ms
+    - ksm
+    - VIJ - Vijayawada
+    - 970070 - Ananta Das
+    - 970157 - Syed Arif Hussain
+    - 970205 - Santosh Kumar Vadla
+    - 2018-03-18 17:50:41.000000000 Z
+    - 2018-03-18 17:50:41.000000000 Z
+    - AP- Andhra Pradesh
+
+---
+users:
+  columns:
+  - id
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - created_at
+  - updated_at
+  - fname
+  - lname
+  - mobile
+  - employee_code
+  - secure_password
+  - role
+  records: 
+  - - 1
+    - khalidhmhd@gmail.com
+    - "$2a$11$abNAmeIkeimjb2SxgzUrgOjepKdebONdt0AX1I7thcsEMAc7ZLkWC"
+    - 
+    - 
+    - 
+    - 25
+    - 2018-03-26 13:25:02.000000000 Z
+    - 2018-03-26 13:23:56.000000000 Z
+    - 127.0.0.1
+    - 192.168.0.26
+    - 2018-03-15 19:36:22.000000000 Z
+    - 2018-03-26 13:25:02.000000000 Z
+    - khalidh
+    - sm
+    - 
+    - 
+    - A12345@m
+    - 
+  - - 2
+    - khalid@entersoftsecurity.com
+    - "$2a$11$8ZY81cfWSwDZo6x95pv2OuoZepgXh940XgbQ02.1d0HMT0To0k8lK"
+    - 
+    - 
+    - 
+    - 4
+    - 2018-03-16 08:56:00.000000000 Z
+    - 2018-03-16 08:52:00.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 2018-03-15 20:32:58.000000000 Z
+    - 2018-03-16 08:57:44.000000000 Z
+    - khalidh
+    - sm
+    - ''
+    - ''
+    - A12345@m
+    - User
+  - - 3
+    - test@gmail.com
+    - "$2a$11$HxCenFfxWqe6djrayaIi8uFR4q0yuHFeAx/veB9lFO2rgQhksTs1O"
+    - 
+    - 
+    - 
+    - 1
+    - 2018-03-16 09:00:05.000000000 Z
+    - 2018-03-16 09:00:05.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 2018-03-16 08:59:58.000000000 Z
+    - 2018-03-16 09:00:05.000000000 Z
+    - test
+    - test
+    - 
+    - 
+    - A12345@m
+    - User
+  - - 4
+    - test2@gmail.com
+    - "$2a$11$dERfB9o6hdGgaAfZEOdtV.eHSjBuj/7cyCaIjh9RLK6mon/.345Cy"
+    - 
+    - 
+    - 
+    - 1
+    - 2018-03-16 09:03:38.000000000 Z
+    - 2018-03-16 09:03:38.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 2018-03-16 09:03:22.000000000 Z
+    - 2018-03-16 09:03:38.000000000 Z
+    - test2
+    - test2
+    - 
+    - 
+    - A12345@m
+    - User
+
+---
+users_roles:
+  columns:
+  - user_id
+  - role_id
+  records: 
+  - - 1
+    - 1
+  - - 2
+    - 2
+  - - 3
+    - 2
+  - - 4
+    - 3
+
+---
+workorders:
+  columns:
+  - id
+  - erpno
+  - clientname
+  - sitename
+  - workorderno
+  - workorderdate
+  - workorder_type
+  - workorder_value
+  - mobbg_no
+  - mobadv
+  - matadv
+  - retbg
+  - perbg
+  - pwarrenty
+  - workcompdate
+  - remarks
+  - created_at
+  - updated_at
+  - user_id
+  - admin_id
+  records: 
+  - - 1
+    - smk
+    - smk
+    - sm
+    - ksm
+    - 03/26/2018
+    - Ammendment
+    - asdjqkjh
+    - jkhjkhkj
+    - hkjh
+    - k
+    - hhk
+    - jhk
+    - h
+    - 03/28/2018
+    - kjk
+    - 2018-03-26 13:01:47.000000000 Z
+    - 2018-03-26 13:01:47.000000000 Z
+    - 1
+    - 

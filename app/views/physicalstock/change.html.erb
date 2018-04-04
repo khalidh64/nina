@@ -1,139 +1,139 @@
-<a href="/stockworkorders/?locno=<%=@stockworkorder.locno %>"><button class="btn btn-primary">Back</button></a><br/><br/>
-<% if notice %>
-	<div class="alert alert-success alert-dismissible" role="alert">
-  	 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <%= notice %>
-  </div>
-<% end %>
-<% if alert %>
-  <div class="alert alert-danger alert-dismissible" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <% alert.each do |e,v| %>
-    	<% if e == "locno" %>
-    		<%= v[0] %><br>
-    	<% else %>
-    		<%=  "#{e} #{v}" %><br>
-    	<% end %>
-    <% end %>
-  </div>
-<% end %>
-<%= simple_nested_form_for @stockworkorder, url: {:action => "update", :method => "patch"}, :html => {:class => "form-horizontal"} do |f| %>
-	<div class="row">
-		<div class="col-sm-4">
-			<%=f.input :locno, :label => "LOC Number",required: true, :placeholder => "LOC Number" %>
+<div class="container-fluid fluide-margin">
+	<a href="/stockworkorders/?locno=<%=@stockworkorder.locno %>"><button class="btn btn-primary">Back</button></a><br/><br/>
+	<% if notice %>
+		<div class="alert alert-success alert-dismissible" role="alert">
+	  	 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	    <%= notice %>
+	  </div>
+	<% end %>
+	<% if alert %>
+	  <div class="alert alert-danger alert-dismissible" role="alert">
+	    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	    <% alert.each do |e,v| %>
+	    	<% if e == "locno" %>
+	    		<%= v[0] %><br>
+	    	<% else %>
+	    		<%=  "#{e} #{v}" %><br>
+	    	<% end %>
+	    <% end %>
+	  </div>
+	<% end %>
+	<%= simple_nested_form_for @stockworkorder, url: {:action => "update", :method => "patch"}, :html => {:class => "form-horizontal"} do |f| %>
+		<div class="row">
+			<div class="col-sm-4">
+				<%=f.input :locno, :label => "LOC Number",required: true, :placeholder => "LOC Number" %>
+			</div>
+			<div class="col-sm-4">
+				<%=f.input :erpno, :label => "ERP Numner:", :placeholder => "ERP Numner" %>
+			</div>
+			<div class="col-sm-4">
+				<%=f.input :projectname, :label => "Project Name", :placeholder => "Project Name" %>
+			</div>
 		</div>
-		<div class="col-sm-4">
-			<%=f.input :erpno, :label => "ERP Numner:", :placeholder => "ERP Numner" %>
+		<div class="row">
+			<div class="col-sm-4">
+				<%=f.input :projectvalue, :label => "Project Value", :placeholder => "Project Value" %>
+			</div>
+			<div class="col-sm-4">
+				<%=f.input :branch, collection:["HYD- Hyderabad","VIJ- Vijayawada"], :label => false, :prompt => "Select Branch", input_html: { class: 'dropdown-size' } %>
+			</div>
+			<div class="col-sm-4">
+				<%=f.input :gmname, collection:["970070-Ananta Das"], :label => false, :prompt => "Select GM", input_html: { class: 'dropdown-size' } %>
+			</div>
 		</div>
-		<div class="col-sm-4">
-			<%=f.input :projectname, :label => "Project Name", :placeholder => "Project Name" %>
+		<div class="row">
+			<div class="col-sm-4">
+				<%=f.input :projectincharge, collection:["970157-Syed Arif Hussain","970080-Mohd Irshad","970091-Vishwanath Naidu","970127-Tirthatarun Mukhopadhyay","970147-Mohd Salman Sayeed","970090-Mahesh Siddappa Kamble","Mohd Firoz","Shyam Sundar"], :label => false, :prompt => "Select Project Incharge", input_html: { class: 'dropdown-size' } %>
+			</div>
+			<div class="col-sm-4">
+				<%=f.input :billingeng, collection: ["970205- Santosh Kumar Vadla","970389- Jitendra Kawde","970147- Mohd Salman Sayeed","970406- Altaf Hussain Shaik","970367- Mohan Kumar N"], :label => false, :prompt => "Select Billing Incharge", input_html: { class: 'dropdown-size' } %>
+			</div>
+			<div class="col-sm-4">
+				<%=f.input :state, collection: ["AP- Andhra Pradesh", "TEL- Telangana"], :label => false, :prompt => "Select State", input_html: { class: 'dropdown-size' } %>
+			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-4">
-			<%=f.input :projectvalue, :label => "Project Value", :placeholder => "Project Value" %>
-		</div>
-		<div class="col-sm-4">
-			<%=f.input :branch, collection:["HYD- Hyderabad","VIJ- Vijayawada"], :label => false, :prompt => "Select Branch" %>
-		</div>
-		<div class="col-sm-4">
-			<%=f.input :gmname, collection:["970070-Ananta Das"], :label => false, :prompt => "Select GM" %>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-4">
-			<%=f.input :projectincharge, collection:["970157-Syed Arif Hussain","970080-Mohd Irshad","970091-Vishwanath Naidu","970127-Tirthatarun Mukhopadhyay","970147-Mohd Salman Sayeed","970090-Mahesh Siddappa Kamble","Mohd Firoz","Shyam Sundar"], :label => false, :prompt => "Select Project Incharge" %>
-		</div>
-		<div class="col-sm-4">
-			<%=f.input :billingeng, collection: ["970205- Santosh Kumar Vadla","970389- Jitendra Kawde","970147- Mohd Salman Sayeed","970406- Altaf Hussain Shaik","970367- Mohan Kumar N"], :label => false, :prompt => "Select Billing Incharge" %>
-		</div>
-		<div class="col-sm-4">
-			<%=f.input :state, collection: ["AP- Andhra Pradesh", "TEL- Telangana"], :label => false, :prompt => "Select State" %>
-		</div>
-	</div>
-	
-	<%= f.fields_for :itemlists do |t| %><br>
-		<div style="margin:0% 3% 0% 3%">
-			<div class="card card-block">
-				<div class="row" style="margin-left:2%;">
-					<div class="3">
+		<br>
+		<%= f.fields_for :itemlists do |t| %>
+			<div style="margin:0% 3% 0% 3%">
+				<div class="card card-block">
+					<div class="row" style="margin-left:2%;">
+						<div class="3">
+					  		<%= t.input :itemno, :label =>"Item Number", :placeholder => "Item Number" %>
+					  	</div>
+					  	<div class="3">
+					  		<%= t.input :itemname, :label =>"Item Name", :placeholder => "Item Name" %>
+					  	</div>
+					  	<div class="3">
+					  		<%= t.input :units, :label =>"Units", collection: [ "Sqm", "Rmt", "Kgs","Nos","Grams","Lts","Packs","Cum","Brass"], :prompt => "Select Units", input_html: { class: 'dropdown-size' } %>
+					  	</div>
+					  	<div class="3">
+					  		<%= t.input :matqty, :label =>"Matrial Quantity", :placeholder => "Matrial Quantity" %>
+					  	</div>
+					  	<div class="row">
+						<div class="3">
+					  		<%= t.input :cumrecqtystart, :label =>"Cum rec qty starttotal", :placeholder => "Cumulative received qty start total" %>
+					  	</div>
+					  	<div class="3">
+					  		<%= t.input :cumconqtystart, :label =>"Cum con qty starttotal", :placeholder => "Cumulative consumption qty start total" %>
+					  	</div>
+					  	<div class="3">
+					  		<%= t.input :balatsitestart, :label =>"Bal at site starttotal", :placeholder => "Balance at site start total" %>
+					  	</div>
+					  	<div class="col-sm-3">
+					  		<%= t.link_to_remove "Remove Item", :type => "button", :class => "btn btn-dark" %>
+					  	</div>
+					  </div>
+					</div>
+				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample<%=t.object.id %>" aria-expanded="false" aria-controls="collapseExample">Show Data</button>
+				<div class="collapse" id="collapseExample<%= t.object.id %>">
+				<%= t.fields_for :dcrs do |d| %><br>
+					<div style="margin:0% 3% 0% 3%">
 						<div class="card card-block">
-				  		<%= t.input :itemno, :label =>"Item Number", :placeholder => "Item Number" %>
-				  	</div>
-				  	</div>
-				  	<div class="3">
-				  		<%= t.input :itemname, :label =>"Item Name", :placeholder => "Item Name" %>
-				  	</div>
-				  	<div class="3">
-				  		<%= t.input :units, :label =>"Units", collection: [ "Sqm", "Rmt", "Kgs","Nos","Grams","Lts","Packs","Cum","Brass"], :prompt => "Select Units" %>
-				  	</div>
-				  	<div class="3">
-				  		<%= t.input :matqty, :label =>"Matrial Quantity", :placeholder => "Matrial Quantity" %>
-				  	</div>
-				  	<div class="row">
-					<div class="3">
-				  		<%= t.input :cumrecqtystart, :label =>"Cum rec qty starttotal", :placeholder => "Cumulative received qty start total" %>
-				  	</div>
-				  	<div class="3">
-				  		<%= t.input :cumconqtystart, :label =>"Cum con qty starttotal", :placeholder => "Cumulative consumption qty start total" %>
-				  	</div>
-				  	<div class="3">
-				  		<%= t.input :balatsitestart, :label =>"Bal at site starttotal", :placeholder => "Balance at site start total" %>
-				  	</div>
-				  	<div class="col-sm-3">
-				  		<%= t.link_to_remove "Remove Item", :type => "button", :class => "btn btn-dark" %>
-				  	</div>
-				  </div>
-				</div>
-			<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample<%=t.object.id %>" aria-expanded="false" aria-controls="collapseExample">Show Data</button>
-			<div class="collapse" id="collapseExample<%= t.object.id %>">
-			<%= t.fields_for :dcrs do |d| %><br>
-				<div style="margin:0% 3% 0% 3%">
-					<div class="card card-block">
-						<div class="row" style="margin:2% 0 0 2%">
-							<div class="3">
-					  			<%= d.input :month, :label =>"Month", collection: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], :prompt => "Select Month" %>
-					  		</div>
-					  		<div class="col-sm-3">
-					  			<%= d.input :year, :label =>"Year", input_html: {value: d.object.year || Date.today.strftime("%Y")} %>
-					  		</div>
-					  		<div class="col-sm-3">
-					  			<%= d.input :date, :label =>"date", :placeholder => "Date" %>
-					  		</div>
-					  		<div class="col-sm-3">
-					  			<%= d.input :cumrecqty, :label =>"Cum Rec qty", :placeholder => "Cum Rec Qty" %>
-					  		</div>
+							<div class="row" style="margin:2% 0 0 2%">
+								<div class="3">
+						  			<%= d.input :month, :label =>"Month", collection: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], :prompt => "Select Month", input_html: { class: 'dropdown-size' } %>
+						  		</div>
+						  		<div class="col-sm-3">
+						  			<%= d.input :year, :label =>"Year", input_html: {value: d.object.year || Date.today.strftime("%Y")} %>
+						  		</div>
+						  		<div class="col-sm-3">
+						  			<%= d.input :date, :label =>"date", :placeholder => "Date" %>
+						  		</div>
+						  		<div class="col-sm-3">
+						  			<%= d.input :cumrecqty, :label =>"Cum Rec qty", :placeholder => "Cum Rec Qty" %>
+						  		</div>
+						  	</div>
+						  	<div class="row" style="margin:2% 0 0 2%">
+						  		<div class="col-sm-3">
+						  			<%= d.input :recqty, :label =>"Rec Qty", :placeholder =>"Rec Qty" %>
+						  		</div>
+						  		<div class="col-sm-3">
+						  			<%= d.input :cumconqty, :label =>"Cum Con qty",:placeholder => "Cum Cons Qty" %>
+						  		</div>
+						  		<div class="col-sm-3">
+						  			<%= d.input :cons, :label =>"Con qty", :placeholder =>"Cons" %>
+						  		</div>
+						  		<div class="col-sm-3">
+						  			<%= d.input :balatsite, :label =>"Bal at site", :placeholder =>"Bal At Site" %>
+						  		</div>
+						  		
+						  	</div>
 					  	</div>
-					  	<div class="row" style="margin:2% 0 0 2%">
-					  		<div class="col-sm-3">
-					  			<%= d.input :recqty, :label =>"Rec Qty", :placeholder =>"Rec Qty" %>
-					  		</div>
-					  		<div class="col-sm-3">
-					  			<%= d.input :cumconqty, :label =>"Cum Con qty",:placeholder => "Cum Cons Qty" %>
-					  		</div>
-					  		<div class="col-sm-3">
-					  			<%= d.input :cons, :label =>"Con qty", :placeholder =>"Cons" %>
-					  		</div>
-					  		<div class="col-sm-3">
-					  			<%= d.input :balatsite, :label =>"Bal at site", :placeholder =>"Bal At Site" %>
-					  		</div>
-					  		
-					  	</div>
-				  	</div>
-				  	<%= d.link_to_remove "Remove DCR", :type => "button", :class => "btn btn-danger" %>
-				</div>
+					  	<%= d.link_to_remove "Remove DCR", :type => "button", :class => "btn btn-danger" %>
+					</div>
+					<br><% end %>
+				<p><%= t.link_to_add "Add DCR", :dcrs, :type => "button", :class => "btn btn-success" %></p>
+			</div>
+			</div>
+			</div>
 				<br><% end %>
-			<p><%= t.link_to_add "Add DCR", :dcrs, :type => "button", :class => "btn btn-success" %></p>
-		</div>
-		</div>
-		</div>
-			<br><% end %>
-		<p><%= f.link_to_add "Add Itemlist", :itemlists, :type => "button", :class => "btn btn-success"  %></p>
+			<p><%= f.link_to_add "Add Itemlist", :itemlists, :type => "button", :class => "btn btn-success"  %></p>
 
-		<div class="form-row text-center">
-    		<div class="col-12">
-        		<%= f.submit "Submit", :class => "btn btn-primary" %>
-    		</div>
- 		</div>
-<% end %>
-<br>
+			<div class="form-row text-center">
+	    		<div class="col-12">
+	        		<%= f.submit "Submit", :class => "btn btn-primary" %>
+	    		</div>
+	 		</div>
+	<% end %>
+	<br>
+</div>

@@ -1,96 +1,98 @@
-<a href="/stockworkorders"><button class="btn btn-primary">Back</button></a><br/><br/>
-<% if notice %>
-	<div class="alert alert-success alert-dismissible" role="alert">
-  	 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <%= notice %>
-  </div>
-<% end %>
-<% if alert %>
-  <div class="alert alert-danger alert-dismissible" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <% alert.each do |e,v| %>
-    	<% if e == "locno" %>
-    		<%= v[0] %><br>
-    	<% else %>
-    		<%=  "#{e} #{v}" %><br>
-    	<% end %>
-    <% end %>
-  </div>
-<% end %>
+<div class="container-fluid fluide-margin">
+	<a href="/stockworkorders"><button class="btn btn-primary">Back</button></a><br/><br/>
+	<% if notice %>
+		<div class="alert alert-success alert-dismissible" role="alert">
+	  	 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	    <%= notice %>
+	  </div>
+	<% end %>
+	<% if alert %>
+	  <div class="alert alert-danger alert-dismissible" role="alert">
+	    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	    <% alert.each do |e,v| %>
+	    	<% if e == "locno" %>
+	    		<%= v[0] %><br>
+	    	<% else %>
+	    		<%=  "#{e} #{v}" %><br>
+	    	<% end %>
+	    <% end %>
+	  </div>
+	<% end %>
 
-<%= simple_nested_form_for @stockworkorder, url: {:action => "create", :method => "post"}, :html => {:class => "form-horizontal" } do |f| %>
-	<div class="row">
-		<div class="col-sm-4">
-			<%=f.input :locno, :label => false,required: true, :placeholder => "LOC Number" %>
+	<%= simple_nested_form_for @stockworkorder, url: {:action => "create", :method => "post"}, :html => {:class => "form-horizontal" } do |f| %>
+		<div class="row">
+			<div class="col-sm-4">
+				<%=f.input :locno, :label => false,required: true, :placeholder => "LOC Number" %>
+			</div>
+			<div class="col-sm-4">
+				<%=f.input :erpno, :label => false, :placeholder => "ERP Numner" %>
+			</div>
+			<div class="col-sm-4">
+				<%=f.input :projectname, :label => false, :placeholder => "Project Name" %>
+			</div>
 		</div>
-		<div class="col-sm-4">
-			<%=f.input :erpno, :label => false, :placeholder => "ERP Numner" %>
+		<div class="row">
+			<div class="col-sm-4">
+				<%=f.input :projectvalue, :label => false, :placeholder => "Project Value" %>
+			</div>
+			<div class="col-sm-4">
+				<%=f.input :branch, collection:["HYD- Hyderabad","VIJ- Vijayawada"], :label => false, :prompt => "Select Branch", input_html: { class: 'dropdown-size' } %>
+			</div>
+			<div class="col-sm-4">
+				<%=f.input :gmname, collection:["970070-Ananta Das"], :label => false, :prompt => "Select GM", input_html: { class: 'dropdown-size' } %>
+			</div>
 		</div>
-		<div class="col-sm-4">
-			<%=f.input :projectname, :label => false, :placeholder => "Project Name" %>
+		<div class="row">
+			<div class="col-sm-4">
+				<%=f.input :projectincharge, collection:["970157-Syed Arif Hussain","970080-Mohd Irshad","970091-Vishwanath Naidu","970127-Tirthatarun Mukhopadhyay","970147-Mohd Salman Sayeed","970090-Mahesh Siddappa Kamble","Mohd Firoz","Shyam Sundar"], :label => false, :prompt => "Select Project Incharge", input_html: { class: 'dropdown-size' } %>
+			</div>
+			<div class="col-sm-4">
+				<%=f.input :billingeng, collection: ["970205- Santosh Kumar Vadla","970389- Jitendra Kawde","970147- Mohd Salman Sayeed","970406- Altaf Hussain Shaik","970367- Mohan Kumar N"], :label => false, :prompt => "Select Billing Incharge", input_html: { class: 'dropdown-size' } %>
+			</div>
+			<div class="col-sm-4">
+				<%=f.input :state, collection: ["AP- Andhra Pradesh", "TEL- Telangana"], :label => false, :prompt => "Select State", input_html: { class: 'dropdown-size' } %>
+			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-4">
-			<%=f.input :projectvalue, :label => false, :placeholder => "Project Value" %>
-		</div>
-		<div class="col-sm-4">
-			<%=f.input :branch, collection:["HYD- Hyderabad","VIJ- Vijayawada"], :label => false, :prompt => "Select Branch" %>
-		</div>
-		<div class="col-sm-4">
-			<%=f.input :gmname, collection:["970070-Ananta Das"], :label => false, :prompt => "Select GM" %>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-4">
-			<%=f.input :projectincharge, collection:["970157-Syed Arif Hussain","970080-Mohd Irshad","970091-Vishwanath Naidu","970127-Tirthatarun Mukhopadhyay","970147-Mohd Salman Sayeed","970090-Mahesh Siddappa Kamble","Mohd Firoz","Shyam Sundar"], :label => false, :prompt => "Select Project Incharge" %>
-		</div>
-		<div class="col-sm-4">
-			<%=f.input :billingeng, collection: ["970205- Santosh Kumar Vadla","970389- Jitendra Kawde","970147- Mohd Salman Sayeed","970406- Altaf Hussain Shaik","970367- Mohan Kumar N"], :label => false, :prompt => "Select Billing Incharge" %>
-		</div>
-		<div class="col-sm-4">
-			<%=f.input :state, collection: ["AP- Andhra Pradesh", "TEL- Telangana"], :label => false, :prompt => "Select State" %>
-		</div>
-	</div>
-	<%= f.fields_for :itemlists do |t| %><br>
-		<div style="margin:0% 3% 0% 3%">
-			<div class="card card-block">
-				<div class="row" style="margin-left:2%">
-					<div class="col-sm-3">
-				  		<%= t.input :itemno, :label =>false, :placeholder => "Item Number" %>
-				  	</div>
-				  	<div class="col-sm-3">
-				  		<%= t.input :itemname, :label =>false, :placeholder => "Item Name" %>
-				  	</div>
-				  	<div class="col-sm-3">
-				  		<%= t.input :units, :label =>false, collection: [ "Sqm", "Rmt", "Kgs","Nos","Grams","Lts","Packs","Cum","Brass"], :prompt => "Select type" %>
-				  	</div>
-				  	<div class="col-sm-3">
-				  		<%= t.input :matqty, :label =>false, :placeholder => "Matrial Quantity" %>
-				  	</div>
-				</div>
-				<div class="row" style="margin-left:2%">
-					<div class="col-sm-3">
-				  		<%= t.input :cumrecqtystart, :label =>false, :placeholder => "Cumulative received qty start total" %>
-				  	</div>
-				  	<div class="col-sm-3">
-				  		<%= t.input :cumconqtystart, :label =>false, :placeholder => "Cumulative consumption qty start total" %>
-				  	</div>
-				  	<div class="col-sm-3">
-				  		<%= t.input :balatsitestart, :label =>false, :placeholder => "Balance at site start total" %>
-				  	</div>
-				  	<div class="col-sm-3">
-				  		<%= t.link_to_remove "Remove Item", :type => "button", :class => "btn btn-dark" %>
-				  	</div>
-				</div>
-		</div>
-		</div>
-			<br><% end %>
-		<p><%= f.link_to_add "Add Itemlist", :itemlists, :type => "button", :class => "btn btn-success"  %></p><br>
-		<div class="form-row text-center">
-    		<div class="col-12">
-        		<%= f.submit "Submit", :class => "btn btn-primary" %>
-    		</div>
- 		</div>
-		
-<% end %>
+		<%= f.fields_for :itemlists do |t| %><br>
+			<div style="margin:0% 3% 0% 3%">
+				<div class="card card-block">
+					<div class="row" style="margin-left:2%">
+						<div class="col-sm-3">
+					  		<%= t.input :itemno, :label =>false, :placeholder => "Item Number" %>
+					  	</div>
+					  	<div class="col-sm-3">
+					  		<%= t.input :itemname, :label =>false, :placeholder => "Item Name" %>
+					  	</div>
+					  	<div class="col-sm-3">
+					  		<%= t.input :units, :label =>false, collection: [ "Sqm", "Rmt", "Kgs","Nos","Grams","Lts","Packs","Cum","Brass"], :prompt => "Select type", input_html: { class: 'dropdown-size' } %>
+					  	</div>
+					  	<div class="col-sm-3">
+					  		<%= t.input :matqty, :label =>false, :placeholder => "Matrial Quantity" %>
+					  	</div>
+					</div>
+					<div class="row" style="margin-left:2%">
+						<div class="col-sm-3">
+					  		<%= t.input :cumrecqtystart, :label =>false, :placeholder => "Cumulative received qty start total" %>
+					  	</div>
+					  	<div class="col-sm-3">
+					  		<%= t.input :cumconqtystart, :label =>false, :placeholder => "Cumulative consumption qty start total" %>
+					  	</div>
+					  	<div class="col-sm-3">
+					  		<%= t.input :balatsitestart, :label =>false, :placeholder => "Balance at site start total" %>
+					  	</div>
+					  	<div class="col-sm-3">
+					  		<%= t.link_to_remove "Remove Item", :type => "button", :class => "btn btn-dark" %>
+					  	</div>
+					</div>
+			</div>
+			</div>
+				<br><% end %>
+			<p><%= f.link_to_add "Add Itemlist", :itemlists, :type => "button", :class => "btn btn-success"  %></p><br>
+			<div class="form-row text-center">
+	    		<div class="col-12">
+	        		<%= f.submit "Submit", :class => "btn btn-primary" %>
+	    		</div>
+	 		</div>
+			
+	<% end %>
+</div>
