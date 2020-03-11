@@ -48,8 +48,8 @@ Rails.application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'localhost:3000',
-    user_name:            'info@entersoftsecurity.com',
-    password:             'admin@123',
+    user_name:            'test@test.com',
+    password:             'test@123',
     authentication:       'plain',
     enable_starttls_auto: true  }
 
