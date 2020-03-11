@@ -37,7 +37,7 @@ gem 'mysql2'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'devise'
-gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap', '~> 4.3.1'
 gem "rolify"
 gem 'passenger', '~> 5.0', '>= 5.0.30'
 gem 'rails_admin', '~> 1.3'
