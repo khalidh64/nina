@@ -40,7 +40,7 @@ gem 'devise'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem "rolify"
 gem 'passenger', '~> 5.0', '>= 5.0.30'
-gem 'rails_admin', '~> 1.3'
+gem 'rails_admin', '~> 1.4'
 gem "nested_form"
 gem 'whenever', require: false
 
